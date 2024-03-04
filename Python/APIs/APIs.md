@@ -76,6 +76,7 @@ The data is the returned data. JSON in the case of APIs, HTML in the case of a n
 
 The end point is the URL you are making the request to.
 
+[List of request verbs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 ### Get
 
 Get data from the API, the returned data will probably be JSON
