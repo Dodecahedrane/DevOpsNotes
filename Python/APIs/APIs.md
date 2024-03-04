@@ -112,10 +112,11 @@ Client requests to the server are similar to URLs you type in your browser to vi
 
 ## 8. What is Caching?
 
-To speed up responses caching is often used.
+To speed up responses caching is often used, it is also used to add resilicancy, or reduce hosting costs.
 
 Generally caching can only be used on Get requests
 
+A cache hit is where there is data in the cache, a miss is where there is not, and the data must be requested from elsewhere.
 ### A Caching Example
 
 There is an API that serves weather data. There is an endpoint that allows the API consumer to request the current data for a particular weather station.
