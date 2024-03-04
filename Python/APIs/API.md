@@ -56,10 +56,10 @@ The method is the REST function being used (see no. 6)
 
 The headers define meta data
 For Get requests to defines the parameters for the request
-It also contains data such as cookies.
+It also contains data such as cookies and auth tokens/logins
 [List of Request Headers](https://flaviocopes.com/http-request-headers/)
 
-Body is the data being sent.
+Body is the data being sent, in a Post, Put, Patch request.
 
 ## 5. HTTP Response Structure
 
@@ -125,6 +125,8 @@ To speed up responses caching is often used, it is also used to add resilicancy,
 Generally caching can only be used on Get requests
 
 A cache hit is where there is data in the cache, a miss is where there is not, and the data must be requested from elsewhere.
+
+Caches aren't normally permanent, and can get updates from the main data store.
 ### A Caching Example
 
 There is an API that serves weather data. There is an endpoint that allows the API consumer to request the current data for a particular weather station.
