@@ -5,9 +5,10 @@ tags:
 ---
 ## YAML Load and Parse
 
+Parse YAML into a [[Dictionary]]
+
 ```python
 import yaml
-
 
 data = yaml.safe_load(open(path_to_yaml).read())  
   

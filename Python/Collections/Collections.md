@@ -54,7 +54,7 @@ Duplicates are not allowed
 a_set = {"apple", "banana", "cherry"}
 ```
 
-## [[Dictionaries]]
+## [[Dictionary]]
 
 Dictionaries have an O(1) lookup because they store the data in memory using the hash of the key. The mapping
 

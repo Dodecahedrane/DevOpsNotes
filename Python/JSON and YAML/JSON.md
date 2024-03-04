@@ -5,6 +5,8 @@ tags:
 ---
 ## Parse JSON
 
+Parse JSON into a [[Dictionary]]
+
 ```python
 import json  
   
