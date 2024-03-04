@@ -1,7 +1,7 @@
 ---
 tags:
   - DevOps
-  - "#SoftwareEngineering"
+  - SoftwareEngineering
   - Python
 ---
 ## Argv

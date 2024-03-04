@@ -1,7 +1,7 @@
 ---
 tags:
   - Python
-  - "#SoftwareEngineering"
+  - SoftwareEngineering
 ---
 # Types of Collections
 

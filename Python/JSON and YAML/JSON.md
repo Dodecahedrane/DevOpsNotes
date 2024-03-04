@@ -1,6 +1,6 @@
 ---
 tags:
-  - "#SoftwareEngineering"
+  - SoftwareEngineering
   - Python
 ---
 ## Parse JSON

@@ -1,7 +1,7 @@
 ---
 tags:
   - Python
-  - "#SoftwareEngineering"
+  - SoftwareEngineering
 ---
 ## 1. What are APIs?
 
