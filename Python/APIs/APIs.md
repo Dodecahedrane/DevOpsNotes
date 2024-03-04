@@ -135,11 +135,11 @@ Weather station data is timely, but not *that* timely.
 
 So lets store the returned data from the weather station for 5 minutes. This should be up to date enough for our API consumers. 
 
-When a request is made the caching layer first looks in its data store (probably a fast in memory database, like Redis) to see what the newest data from the weather station is. In this case the data stored is only 35 seconds old. This is good data, so we'll return this directly to the API consumer.
+When a request is made the caching layer first looks in its data store (probably a fast in memory database, like Redis) to see what the newest data from the weather station is. In this case the data stored is only 35 seconds old. This is good data (a cache hit), so we'll return this directly to the API consumer.
 
 This avoids us having to ask the weather station for the data, saving bandwidth and data costs.
 
-Another request is made, this time the data is 5m4s old. This is older than our 5 min 'cache time'. In this case, the API controller will make a new request to the weather station for the most up to date data. It will then do two things, return this to the consumer, and store it in the cache database, along with a new timestamp.
+Another request is made, this time the data is 5m4s old (a cache miss). This is older than our 5 min 'cache time'. In this case, the API controller will make a new request to the weather station for the most up to date data. It will then do two things, return this to the consumer, and store it in the cache database, along with a new timestamp.
 
 As this caching is done in the cloud, you get much cheaper compute/bandwidth than you would on the weather station. It also allows you to resilient to outages in the mobile network or weather station.
 
