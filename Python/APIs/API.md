@@ -54,7 +54,9 @@ The URL is the API end point.
 
 The method is the REST function being used (see no. 6)
 
-The headers define meta data, such as cookies.
+The headers define meta data
+For Get requests to defines the parameters for the request
+It also contains data such as cookies.
 [List of Request Headers](https://flaviocopes.com/http-request-headers/)
 
 Body is the data being sent.
