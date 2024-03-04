@@ -114,9 +114,9 @@ Client requests to the server are similar to URLs you type in your browser to vi
 
 To speed up responses caching is often used.
 
-Generally caching can only be used on Get requests, as all other requests require writes.
+Generally caching can only be used on Get requests
 
-For example:
+### A Caching Example
 
 There is an API that serves weather data. There is an endpoint that allows the API consumer to request the current data for a particular weather station.
 
@@ -141,6 +141,8 @@ This avoids us having to ask the weather station for the data, saving bandwidth 
 Another request is made, this time the data is 5m4s old. This is older than our 5 min 'cache time'. In this case, the API controller will make a new request to the weather station for the most up to date data. It will then do two things, return this to the consumer, and store it in the cache database, along with a new timestamp.
 
 As this caching is done in the cloud, you get much cheaper compute/bandwidth than you would on the weather station. It also allows you to resilient to outages in the mobile network or weather station.
+
+### Other uses for caching
 
 The same theory can be applied to other architectures. For example caching a pre calculated feed news feed (calculate once per hour, then you save this calculation for future requests, so you don't need to calculate it for all requests and users). Or adding a caching database like Redis in front of a relational database like MySQL. This caching layer stores some % of common requests or data from the RD for quick serving (and cheap!), while only passing a smaller number of requests to the slower, more expensive RD.
 

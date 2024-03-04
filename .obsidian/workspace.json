@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/JSON and YAML/YAML.md",
+                "file": "Python/APIs/APIs.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:SoftwareEngineering",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python/JSON and YAML/YAML.md",
+                "file": "Python/APIs/APIs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python/JSON and YAML/YAML.md",
+                "file": "Python/APIs/APIs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Python/JSON and YAML/YAML.md"
+                "file": "Python/APIs/APIs.md"
               }
             }
           }
@@ -147,8 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "80aa0025cfe98ce0",
+  "active": "b56398c1a9dc3bf6",
   "lastOpenFiles": [
+    "Python/JSON and YAML/YAML.md",
     "Python/Scripting.md",
     "Python/JSON and YAML/JSON.md",
     "Python/Collections/Collections.md",
