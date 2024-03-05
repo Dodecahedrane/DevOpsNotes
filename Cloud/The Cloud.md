@@ -65,7 +65,7 @@ CapEx = Capital Expense (not recurring)
 ##  Marketshare - What is the breakdown? 
 
 ![Marketshare](https://cdn.statcdn.com/Infographic/images/normal/18819.jpeg)
-## What are the 3 largest Cloud providers known for (What makes them popular?)
+## What are the 3 largest Cloud providers known for (What makes them popular?
 
 - AWS
 - Azure
