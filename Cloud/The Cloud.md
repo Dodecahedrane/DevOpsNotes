@@ -94,13 +94,11 @@ Cloud platforms provide monitoring and analytics tools that enable DevOps teams 
 Cloud platforms support sharing and collaboration by providing centralized repositories, version control systems, and collaboration tools (same as culture???)
 
 ## Find up to 3 case studies showing how businesses have migrated to the cloud or used the cloud to improve in some way
-
-// TODO Read case studies and makes notes
 ### 1
 
 [AWS: Southwest Airlines Automated Mac Test Infrastructure](https://aws.amazon.com/solutions/case-studies/southwest-devicefarm-ec2-case-study/)
 
-AWS allowed Southwest airlines to roll out infrastructure to test on Mac devices, avoiding the problems involved with the procurement, set up and maintaince of an on premesis set of Mac devices for automated testing of user facing services.
+AWS allowed Southwest airlines to roll out infrastructure to test on Mac devices, avoiding the problems involved with the procurement, set up and maintenance of an on premises set of Mac devices for automated testing of user facing services.
 
 Takeaway: The cloud can provide infrastructure that can speed up development
 ### 2
@@ -121,13 +119,13 @@ Takeaway: The cloud can't always do everything, use the cloud for what it does w
 
 [Monzo on AWS](https://d0.awsstatic.com/analyst-reports/EMEA41642116%20Web.pdf)
 
-Takeaway
+Takeaway: 
 ### Counter Case Study
 
 [We have left the cloud](https://world.hey.com/dhh/we-have-left-the-cloud-251760fb) 
 [We stand to save $7m over five years from our cloud exit](https://world.hey.com/dhh/we-stand-to-save-7m-over-five-years-from-our-cloud-exit-53996caa)
 
-Takeaway: The cloud ins't always cheaper! Especially if your workload isn't very dynamic.
+Takeaway: The cloud isn't always cheaper! Especially if your workload isn't very dynamic.
 ## How does Cloud Computing work as a business model?
 
 Offers resources (cloud, storage, etc) on a pay as you go model, where users only need to pay of the resources they want to use, and can shutdown resources whenever they aren't required (to meet demand for example).
