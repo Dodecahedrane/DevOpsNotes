@@ -99,20 +99,35 @@ Cloud platforms support sharing and collaboration by providing centralized repos
 ### 1
 
 [AWS: Southwest Airlines Automated Mac Test Infrastructure](https://aws.amazon.com/solutions/case-studies/southwest-devicefarm-ec2-case-study/)
+
+AWS allowed Southwest airlines to roll out infrastructure to test on Mac devices, avoiding the problems involved with the procurement, set up and maintaince of an on premesis set of Mac devices for automated testing of user facing services.
+
+Takeaway: The cloud can provide infrastructure that can speed up development
 ### 2
 
 [Lambda Labs: # Voltron Data Case Study: Why ML Teams Are Using Lambda Reserved Cloud Clusters](https://lambdalabs.com/blog/voltron-data-case-study-why-ml-teams-using-reserved-cloud-clusters)
+
+This case study show how all cloud provides aren't' made equal. In ML bandwidth between nodes is crucial for fast training of large models. In this case study it shows how Lambda Labs provides a cloud with over 3x the node to node bandwidth of AWS. As well as a large cost difference for the equivalent compute vs AWS.
+
+Takeaway: No all clouds are equal.
 ### 3
 
 [Netflix: AWS and their own CDN](https://ayushhsinghh.medium.com/case-study-how-netflix-is-using-aws-and-its-own-cdn-64ca6282eda0)
+
+This is a good study to show how Netflix uses AWS for the more standard parts of their infrastructure, such as web hosting and database requirements. While integrating their own network of nodes to build a custom CDN tailored to their use case that they would not have been able to find on any existing cloud platform.
+
+Takeaway: The cloud can't always do everything, use the cloud for what it does well and design custom infrastructure for what it does not do well.
 ### 4
 
 [Monzo on AWS](https://d0.awsstatic.com/analyst-reports/EMEA41642116%20Web.pdf)
+
+Takeaway
 ### Counter Case Study
 
 [We have left the cloud](https://world.hey.com/dhh/we-have-left-the-cloud-251760fb) 
 [We stand to save $7m over five years from our cloud exit](https://world.hey.com/dhh/we-stand-to-save-7m-over-five-years-from-our-cloud-exit-53996caa)
 
+Takeaway: The cloud ins't always cheaper! Especially if your workload isn't very dynamic.
 ## How does Cloud Computing work as a business model?
 
 Offers resources (cloud, storage, etc) on a pay as you go model, where users only need to pay of the resources they want to use, and can shutdown resources whenever they aren't required (to meet demand for example).
