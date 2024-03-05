@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSH.md",
+                "file": "Cloud/SSH.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SSH.md",
+                "file": "Cloud/SSH.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SSH.md",
+                "file": "Cloud/SSH.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSH.md"
+                "file": "Cloud/SSH.md"
               }
             }
           }
@@ -148,7 +148,10 @@
   },
   "active": "6be359ad682fd2c9",
   "lastOpenFiles": [
-    "SSH.md",
+    "Cloud/The Cloud.md",
+    "Cloud/Azure.md",
+    "Cloud/SSH.md",
+    "Cloud",
     "Python/JSON and YAML/JSON.md",
     "Python/Collections/Collections.md",
     "Python/APIs/Request Library.md",
