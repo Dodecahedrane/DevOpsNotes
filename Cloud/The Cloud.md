@@ -10,6 +10,8 @@ tags:
 > Simply put, cloud computing is the delivery of computing services—including servers, storage, databases, networking, software, analytics, and intelligence—over the Internet (“the cloud”) to offer faster innovation, flexible resources, and economies of scale.
 
 [Azure: What is Cloud Computing?](https://azure.microsoft.com/en-gb/resources/cloud-computing-dictionary/what-is-cloud-computing#:~:text=Simply%20put%2C%20cloud%20computing%20is,resources%2C%20and%20economies%20of%20scale.)
+
+For a business the cloud means they can acquire, use and scale infrastructure/compute in flexible and adaptable way that can meet the short term demands of their business in a way that simply isn't (economically) possible with traditional on premises infrastructure.
 ## Quick history/timeline of Cloud Computing.
 
 AWS launch in 2006, but the original idea was from the 60s. The initial concepts of compute time share becoming popularized via remote job entry. The "data center" model, where users submitted jobs to operators to run on mainframes, was predominantly used during this era
@@ -25,7 +27,7 @@ AWS launch in 2006, but the original idea was from the 60s. The initial concepts
 
 ## What are the 4 types of Cloud?
 
-[Red Dat: Types of Cloud Computing](https://www.redhat.com/en/topics/cloud-computing/public-cloud-vs-private-cloud-and-hybrid-cloud#:~:text=Why%20Red%20Hat%3F-,Overview,a%2DService%20(SaaS).)
+[RedHat: Types of Cloud Computing](https://www.redhat.com/en/topics/cloud-computing/public-cloud-vs-private-cloud-and-hybrid-cloud#:~:text=Why%20Red%20Hat%3F-,Overview,a%2DService%20(SaaS).)
 
 - Public Cloud
 	- Uses shared infrastructure
@@ -42,15 +44,17 @@ All multiclouds are hybrid clouds, not all hybrid clouds are multiclouds.
 For example, Azure + On Premises = Hybrid but not Multi
 ## What are the different providers and types of cloud service?
 
-### Providers
-- Azure
-- AWS
-- GCP
-- Digital Ocean
-- Hetzner
-- etc etc etc etc etc etc
-### Types of Service
-- klasld
+### Infrastructure-as-a-Service (IaaS)
+
+It is where instead of owning physical hardware such as servers, storage, networking components, and data centers, users rent (by the second usually) these resources from a cloud service provider, such as AWS.
+### **Platforms-as-a-Service (PaaS)
+
+PaaS is IaaS with some software on top to use the infrastructure, such as hosted Databases.
+### Software-as-a-Service (SaaS)
+
+It is where instead of purchasing and installing software applications on individual computers or servers, users access software applications over the internet, normally via a web browser.
+
+Examples include Trello, GitHub and Office 365. 
 ## Advantages/Disadvantages of the Cloud? Specifically for a business.
 
 Good for dynamic workloads where you can scale your infra for short periods of time to meet increased demand without having to have the expense of that infrastructure the other 364 days a year.
