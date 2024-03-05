@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "84166b13a865a306",
+        "id": "27e90e8ad5d56498",
         "type": "tabs",
         "children": [
           {
-            "id": "80aa0025cfe98ce0",
+            "id": "6be359ad682fd2c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/APIs/API.md",
+                "file": "SSH.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python/APIs/API.md",
+                "file": "SSH.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python/APIs/API.md",
+                "file": "SSH.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Python/APIs/API.md"
+                "file": "SSH.md"
               }
             }
           }
@@ -146,16 +146,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "80aa0025cfe98ce0",
+  "active": "6be359ad682fd2c9",
   "lastOpenFiles": [
-    "Python/APIs/API.md",
+    "SSH.md",
+    "Python/JSON and YAML/JSON.md",
+    "Python/Collections/Collections.md",
     "Python/APIs/Request Library.md",
+    "Python/Collections/Tuples.md",
+    "Python/JSON and YAML/YAML.md",
     "API.md",
     "Python/Collections/Dictionary.md",
-    "Python/JSON and YAML/YAML.md",
-    "Python/JSON and YAML/JSON.md",
     "Python/Libraries, Modules, Packages.md",
-    "Python/Scripting.md",
-    "Python/Collections/Collections.md"
+    "Python/Scripting.md"
   ]
 }
