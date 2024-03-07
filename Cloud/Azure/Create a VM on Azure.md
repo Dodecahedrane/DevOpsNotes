@@ -37,7 +37,7 @@ Select 'No Infra Redundancy Required' to have no availability zones
 
 ![[Pasted image 20240307091550.png]]
 
-You can choose the base image for the VM. Various flavors of Linux, BSD and Windows
+You can choose the base image for the VM. Various flavors of [[Linux]], BSD and Windows
 
 ### VM Arch., Spot and Size
 ![[Pasted image 20240307091736.png]]

@@ -25,5 +25,5 @@ See [[Create a VM on Azure]] for how to create a VM
 
 ![[Pasted image 20240307094336.png]]
 
-You can connect using the Azure web portal, Azure CLI or locally with [[Azure SSH]]
+You can connect using the Azure web portal, Azure CLI or locally with [[Azure SSH]] using open[[SSH]]
 

@@ -5,7 +5,7 @@ tags:
   - Azure
   - SSH
 ---
-## Connect With SSH
+## Connect With [[SSH]]
 
 [Azure Docs](https://learn.microsoft.com/en-us/azure/virtual-machines/ssh-keys-portal)
 

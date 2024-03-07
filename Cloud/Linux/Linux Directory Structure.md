@@ -6,7 +6,7 @@ tags:
 
 ## Root Directories
 
-[Linux Directory Structure](https://www.geeksforgeeks.org/linux-directory-structure/)
+[[Linux]] [Directory Structure](https://www.geeksforgeeks.org/linux-directory-structure/)
 
 | Directories     | Description                                                                                                                         |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |

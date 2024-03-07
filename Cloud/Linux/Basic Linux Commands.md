@@ -4,7 +4,7 @@ tags:
   - DevOps
   - Bash
 ---
-# **Linux commands are case sensitive!**
+# **[[Linux]] commands are case sensitive!**
 
 ![[Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf]]
 
@@ -12,7 +12,7 @@ tags:
 
 The shell is a program that takes commands from the keyboard and gives them to the operating system to perform
 
-On most Linux systems a program called bash (which stands for Bourne Again SHell, an enhanced version of the original Unix shell program, `sh`) acts as the shell program. Besides `bash`, there are other shell programs available for Linux systems. These include: `ksh`, `tcsh` and `zsh`
+On most [[Linux]] systems a program called bash (which stands for Bourne Again Shell, an enhanced version of the original Unix shell program, `sh`) acts as the shell program. Besides `bash`, there are other shell programs available for Linux systems. These include: `ksh`, `tcsh` and `zsh`
 
 ## Get command history
 
@@ -367,3 +367,57 @@ $ tree
 sudo su
 ```
 
+## System [[Processes]]
+
+### View Status
+
+```bash
+systemctl status <process>
+```
+
+Output should look similar to this:
+
+```bash
+● nginx.service - A high performance web server and a reverse proxy server
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2024-03-07 14:26:58 UTC; 50s ago
+     Docs: man:nginx(8)
+ Main PID: 3554 (nginx)
+    Tasks: 2 (limit: 976)
+   CGroup: /system.slice/nginx.service
+           ├─3554 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+           └─3558 nginx: worker process
+
+Mar 07 14:26:58 tech257-oliver-learn-linux-vm systemd[1]: Starting A high performance web server and a reverse proxy server...
+Mar 07 14:26:58 tech257-oliver-learn-linux-vm systemd[1]: nginx.service: Failed to parse PID from file /run/nginx.pid: Invalid argument
+Mar 07 14:26:58 tech257-oliver-learn-linux-vm systemd[1]: Started A high performance web server and a reverse proxy server.
+```
+
+### Restart
+
+```bash
+sudo systemctl restart <process>
+```
+
+### Start
+
+```bash
+sudo systemctl start <process>
+```
+### Stop
+
+```bash
+sudo systemctl stop <process>
+```
+
+### Is Enabled
+
+```bash
+systemctl is-enabled nginx
+```
+
+### Enable Process
+
+```bash
+sudo systemctl enable nginx
+```
