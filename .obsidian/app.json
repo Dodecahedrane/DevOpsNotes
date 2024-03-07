@@ -1,1 +1,6 @@
-{}
+{
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "trashOption": "local",
+  "attachmentFolderPath": "Attachments"
+}

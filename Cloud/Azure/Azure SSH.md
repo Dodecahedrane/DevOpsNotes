@@ -24,3 +24,7 @@ ssh -i .\tech257-oliver-learn-linux-vm-key.pem oliver@172.187.157.145
 ```
 
 Type Yes and press Enter if it does not recognize the host 
+
+## Disconnect from VM
+
+type `exit` when SSH'd into the VM to exit and return to your local terminal

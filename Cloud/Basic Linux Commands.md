@@ -1,2 +1,0 @@
-![[linux-commands-handbook.pdf]]
-

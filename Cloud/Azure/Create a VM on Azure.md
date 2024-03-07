@@ -1,8 +1,8 @@
 ![[Pasted image 20240307090804.png]]
 
-Click 'create'
-
 ![[Pasted image 20240307090914.png]]
+
+Click create, and the Azure Virtual Machine
 
 ![[Pasted image 20240307090955.png]]
 
@@ -30,7 +30,9 @@ Where the VM is hosted
 
 You can set Availability Zones to duplicate the VM across multiple regions to add redundancy and fault tolerance
 
-Set 'no '
+![[Pasted image 20240307094654.png]]
+Select 'No Infra Redundancy Required' to have no availability zones
+
 ### Image
 
 ![[Pasted image 20240307091550.png]]

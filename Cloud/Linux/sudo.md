@@ -1,0 +1,1 @@
+sudo stands for super user do and allows you to run commands as the root user (most of the time, some commands require you to be logged in a root with ``sudo su``).
