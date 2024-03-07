@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud/The Cloud.md",
+                "file": "Cloud/Azure VM Basics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0cd5edc9e1b1194a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Create a VM on Azure.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/The Cloud.md",
+                "file": "Cloud/Create a VM on Azure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/The Cloud.md",
+                "file": "Cloud/Create a VM on Azure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud/The Cloud.md"
+                "file": "Cloud/Create a VM on Azure.md"
               }
             }
           }
@@ -146,11 +159,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6be359ad682fd2c9",
+  "active": "0cd5edc9e1b1194a",
   "lastOpenFiles": [
-    "Cloud/SSH.md",
+    "Pasted image 20240307093219.png",
+    "Pasted image 20240307093159.png",
+    "Cloud/Azure VM Basics.md",
+    "Pasted image 20240307092320.png",
+    "Cloud/Create a VM on Azure.md",
+    "Pasted image 20240307091934.png",
+    "Pasted image 20240307091736.png",
+    "Pasted image 20240307091550.png",
+    "Pasted image 20240307091329.png",
+    "Pasted image 20240307090955.png",
+    "Pasted image 20240307090914.png",
+    "Pasted image 20240307090804.png",
+    "Cloud/Azure SSH.md",
+    "Cloud/Basic Linux Commands.md",
+    "linux-commands-handbook.pdf",
     "Cloud/The Cloud.md",
-    "Cloud/Azure.md",
+    "Cloud/SSH.md",
     "Cloud",
     "Python/JSON and YAML/JSON.md",
     "Python/Collections/Collections.md",
