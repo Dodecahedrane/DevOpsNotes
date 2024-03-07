@@ -4,7 +4,6 @@ tags:
   - DevOps
   - Bash
 ---
-
 # **Linux commands are case sensitive!**
 
 ![[Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf]]
@@ -231,6 +230,7 @@ mkdir hello\ world
 ```
 ## Remove
 
+**Be Careful With Remove**
 ### Remove file
 
 ```bash

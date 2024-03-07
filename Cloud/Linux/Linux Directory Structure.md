@@ -1,3 +1,9 @@
+---
+tags:
+  - DevOps
+  - Linux
+---
+
 ## Root Directories
 
 [Linux Directory Structure](https://www.geeksforgeeks.org/linux-directory-structure/)
