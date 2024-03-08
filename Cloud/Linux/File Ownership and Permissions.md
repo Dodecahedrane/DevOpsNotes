@@ -44,7 +44,7 @@ For security, allows users to explicitly enable on a per file basic, so they can
 ### What command is used to change the owner of a file or directory?
 
 ```bash
-chown <new_owner> <file_or_directory>
+chown <owner>:<group> <file_or_directory>
 ```
 
 ## File Permissions
@@ -64,7 +64,7 @@ Every user on a Linux system belongs to one or more groups. When you assign perm
 
 The "Other" entity refers to users who are neither the owner of the file nor members of the group associated with the file
 
-### You give the following permissions to a \[file: Use](file: Us "‌")r permissions are read-only, Group permissions are read and write, Other permissions are read, write and execute. You are logged in as the user which is owner of the file. What permissions will you have on this file? Explain.
+### You give the following permissions to a file. User permissions are read-only, Group permissions are read and write, Other permissions are read, write and execute. You are logged in as the user which is owner of the file. What permissions will you have on this file? Explain.
 
 - User permissions: Read-only
 - Group permissions: Read and write

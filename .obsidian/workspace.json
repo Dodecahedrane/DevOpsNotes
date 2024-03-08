@@ -202,9 +202,9 @@
   },
   "active": "7275092c68a20410",
   "lastOpenFiles": [
-    "Cloud/Linux/Bash Scripts.md",
-    "Cloud/Linux/File Ownership and Permissions.md",
     "Cloud/Linux/Group.md",
+    "Cloud/Linux/File Ownership and Permissions.md",
+    "Cloud/Linux/Bash Scripts.md",
     "Cloud/Linux/Basic Linux Commands.md",
     "Cloud/Linux/Processes.md",
     "Cloud/Linux/Linux Environment Variables.md",
