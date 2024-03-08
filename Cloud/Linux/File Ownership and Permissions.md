@@ -79,12 +79,12 @@ If you are logged in as the owner of that file, you will have read-only access t
     - The next three characters (`rwx`) represent the permissions for the owner (`tcboony`). `r` indicates read permission, `w` indicates write permission, and `x` indicates execute permission. In this case, the owner has read (`r`), write (`w`), and execute (`x`) permissions.
     - The next three characters (`r-x`) represent the permissions for the group (`staff`). In this case, the group has read (`r`) and execute (`x`) permissions, but does not have write permission (`-`).
     - The last three characters (`r--`) represent the permissions for others (users not in the owner's group). In this case, others have only read (`r`) permission, but do not have write or execute permissions (`--`).
-2. `1`: This part indicates the number of hard links to the file. In this example, there is one hard link to the file.
-3. `tcboony`: This part indicates the owner of the file. In this case, the owner is `tcboony`.
-4. `staff`: This part indicates the group associated with the file. In this case, the group is `staff`.
-5. `123`: This part indicates the size of the file in bytes. In this example, the file size is 123 bytes.
-6. `Nov 25 18:36`: This part indicates the date and time when the file was last modified. In this example, it was last modified on November 25th at 18:36.
-7. `keeprunning.sh`: This part indicates the name of the file, which is `keeprunning.sh`.
+2. `1`  - This part indicates the number of hard links to the file. In this example, there is one hard link to the file.
+3. `tcboony` - This part indicates the owner of the file. In this case, the owner is `tcboony`.
+4. `staff` - This part indicates the group associated with the file. In this case, the group is `staff`.
+5. `123` - This part indicates the size of the file in bytes. In this example, the file size is 123 bytes.
+6. `Nov 25 18:36` - This part indicates the date and time when the file was last modified. In this example, it was last modified on November 25th at 18:36.
+7. `keeprunning.sh` - This part indicates the name of the file
 
 
 ## Managing File Permissions with Numeric Values
