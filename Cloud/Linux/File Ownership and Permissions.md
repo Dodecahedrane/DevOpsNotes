@@ -118,6 +118,12 @@ If you want to set file permissions to `rw-r--r--`, you would assign the numeric
 - Group permissions = 4 (read)
 - Others permissions = 4 (read)
 
+| Permission | r   | w   | -   | r   | -   | -   | r   | -   | -   |
+| ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Value      | 4   | 2   | 0   | 4   | 0   | 0   | 0   | 0   | 0   |
+| Sum        |     | 6   |     |     | 4   |     |     | 4   |     |
+
+
 Apply the permissions with
 
 ```bash
