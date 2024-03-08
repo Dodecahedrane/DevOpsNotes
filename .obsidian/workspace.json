@@ -73,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/Linux/File Ownership and Permissions.md",
+                "file": "Cloud/Linux/Processes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/Linux/File Ownership and Permissions.md",
+                "file": "Cloud/Linux/Processes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud/Linux/File Ownership and Permissions.md"
+                "file": "Cloud/Linux/Processes.md"
               }
             }
           }
@@ -200,11 +200,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7275092c68a20410",
+  "active": "7ab785249f92062e",
   "lastOpenFiles": [
+    "Cloud/Linux/File Ownership and Permissions.md",
     "Cloud/Linux/Basic Linux Commands.md",
     "Cloud/Linux/Processes.md",
-    "Cloud/Linux/File Ownership and Permissions.md",
     "Cloud/Linux/Group.md",
     "Cloud/Linux/Bash Scripts.md",
     "Cloud/Linux/Linux Environment Variables.md",
