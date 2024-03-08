@@ -78,7 +78,7 @@
                 }
               },
               {
-                "id": "6fe9c169b75af7ce",
+                "id": "ac1f676e2f8ef68b",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
@@ -204,8 +204,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5bc1b361942c56ca",
@@ -282,11 +281,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b56398c1a9dc3bf6",
+  "active": "ac1f676e2f8ef68b",
   "lastOpenFiles": [
+    "Cloud/Azure/Create a VM on Azure.md",
     "Cloud/Linux/Processes.md",
-    "Cloud/Linux/Basic Linux Commands.md",
     "Cloud/Azure/Deploying Test Application.md",
+    "Attachments/Pasted image 20240308165409.png",
+    "Attachments/Pasted image 20240308164830.png",
+    "Cloud/Linux/Basic Linux Commands.md",
     "Cloud/Linux/Bash Scripts.md",
     "Cloud/Azure/Azure SSH.md",
     "Attachments/Pasted image 20240308125134.png",
@@ -295,7 +297,6 @@
     "Cloud/Azure/Azure Virtual Networks and Subnets.md",
     "Attachments/Pasted image 20240308124222.png",
     "Attachments/Pasted image 20240308123230.png",
-    "Cloud/Azure/Create a VM on Azure.md",
     "Cloud/Linux/File Ownership and Permissions.md",
     "Cloud/Linux/Group.md",
     "Cloud/Linux/Linux Environment Variables.md",
@@ -315,8 +316,6 @@
     "Cloud/Linux",
     "Cloud/Azure",
     "Cloud/Azure VM Basics.md",
-    "Attachments/Pasted image 20240307094654.png",
-    "Pasted image 20240307094336.png",
     "Attachments/git-cheat-sheet.pdf",
     "Markdown.md",
     "Attachments/linux-commands-handbook.pdf",

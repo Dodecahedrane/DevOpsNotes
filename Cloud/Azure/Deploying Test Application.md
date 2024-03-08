@@ -3,8 +3,12 @@ tags:
   - Azure
   - Linux
   - DevOps
+  - Bash
+  - Scripts
+  - rsync
+  - scp
+  - SSH
 ---
-
 ## Web Server VM Resource Config
 
 OS: Ubuntu 22.04LTS
@@ -57,8 +61,18 @@ This is the web server VM set up correctly.
 - [x] run app with ``pm2``
 - [x] Test bash script on fresh VM
 
-Install Script:
+### Install Script
 
+#### Create Script
+
+```bash
+touch prov_nodejs.sh
+nano prov_nodejs.sh
+chmod u+x prov_nodejs.sh
+./prov_nodejs.sh
+```
+
+#### Script
 
 ```bash
 #!/bin/bash
@@ -92,6 +106,18 @@ sudo npm install pm2 -g
 # start the app with pm2 (in the background)
 pm2 start app.js
 ```
+
+### Verify it works
+
+Navigate to
+
+> [http://<public-ip-address\>:3000/](http://<public-ip-address\>:3000/)
+
+You should see
+
+![[Pasted image 20240308165409.png]]
+
+#### On the VM
 
 To see the running PM2 processes
 
@@ -132,9 +158,9 @@ pm stop <id>
 ```
 
 The ``<id>`` is the id from ``pm2 list``. So in the case of the above output, ``0``
-### How to transfer files from one machine to another
+## How to transfer files from one machine to another
 
-#### ``scp``
+### ``scp``
 
 ```bash
 scp -i ~/.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem -r app/ adminuser@172.167.178.177:~/
@@ -144,7 +170,7 @@ scp -i ~/.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem -r app/ adminuser@17
 scp -i <ssh-key> -r <local-file-path> <user-name>@<ip-address>:<remote-file-path>
 ```
 
-#### ``rsync``
+### ``rsync``
 
 This is running in WSL as its not natively available on Windows.
 
@@ -155,3 +181,7 @@ rsync -avz -e "ssh -i ../../.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem" 
 ```bash
 rsync -avz -e "ssh -i <ssh-key>" <local-file-path> <user>@<ip-address>:<remote-file-path>
 ```
+
+*for reference next week*
+
+![[Pasted image 20240308164830.png]]
