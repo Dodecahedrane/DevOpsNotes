@@ -283,9 +283,11 @@
   },
   "active": "ac1f676e2f8ef68b",
   "lastOpenFiles": [
+    "Cloud/Azure/prov_nodejs.sh",
+    "Cloud/Azure/Untitled.md",
+    "Cloud/Azure/Deploying Test Application.md",
     "Cloud/Azure/Create a VM on Azure.md",
     "Cloud/Linux/Processes.md",
-    "Cloud/Azure/Deploying Test Application.md",
     "Attachments/Pasted image 20240308165409.png",
     "Attachments/Pasted image 20240308164830.png",
     "Cloud/Linux/Basic Linux Commands.md",
@@ -323,7 +325,6 @@
     "Untitled.md",
     "Cloud/The Cloud.md",
     "Cloud",
-    "Python/JSON and YAML/JSON.md",
-    "Python/Collections/Collections.md"
+    "Python/JSON and YAML/JSON.md"
   ]
 }
