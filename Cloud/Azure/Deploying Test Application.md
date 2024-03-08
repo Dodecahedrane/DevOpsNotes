@@ -36,7 +36,7 @@ This is the web server VM set up correctly.
 ## MongoDB Database Server VM Resource Config
 
 //TODO
-## Set Up Web Server App (Manually)
+## Set Up Web Server App
 
 **We will make a note and save these commands, taking note on if they require user input (as the automation script wont take any user input)**
 
@@ -93,6 +93,22 @@ sudo npm install pm2 -g
 pm2 start app.js
 ```
 
+To see the running PM2 processes
+
+```bash
+pm2 list
+```
+
+Output:
+
+```bash
+┌────┬────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0  │ app    │ default     │ 1.0.1   │ fork    │ 4803     │ 16m    │ 0    │ online    │ 0%       │ 71.9mb   │ azu… │ disabled │
+└────┴────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+```
+
 To get the PM2 process ID run
 
 ```bash
@@ -107,9 +123,18 @@ azureus+    4865  0.0  0.2   7008  2432 pts/0    S+   16:28   0:00 grep --color=
 ```
 
 The PID for PM2 is ``4792``. The second process is the grep command finding this info.
+
+Kill the PM2 Process
+
+```bash
+pm2 stop all
+pm stop <id>
+```
+
+The ``<id>`` is the id from ``pm2 list``. So in the case of the above output, ``0``
 ### How to transfer files from one machine to another
 
-SCP:
+#### ``scp``
 
 ```bash
 scp -i ~/.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem -r app/ adminuser@172.167.178.177:~/
@@ -119,7 +144,9 @@ scp -i ~/.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem -r app/ adminuser@17
 scp -i <ssh-key> -r <local-file-path> <user-name>@<ip-address>:<remote-file-path>
 ```
 
-There is also ``rsync`` available on Linux or WSL.
+#### ``rsync``
+
+This is running in WSL as its not natively available on Windows.
 
 ```bash
 rsync -avz -e "ssh -i ../../.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem" ./app adminuser@172.167.178.177:~/

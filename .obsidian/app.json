@@ -1,5 +1,5 @@
 {
-  "readableLineLength": true,
+  "readableLineLength": false,
   "strictLineBreaks": false,
   "trashOption": "local",
   "attachmentFolderPath": "Attachments"
