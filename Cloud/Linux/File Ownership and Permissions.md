@@ -75,7 +75,7 @@ If you are logged in as the owner of that file, you will have read-only access t
 ### Explain all parts of: `-rwxr-xr-- 1 tcboony staff 123 Nov 25 18:36 keeprunning.sh`
 
 1. `-rwxr-xr--`: This part describes the permissions of the file. It consists of ten characters, which are divided into four sections:
-    - The first character indicates the type of the file or directory. In this case, it's a regular file because it starts with a hyphen (`-`).
+    - The first character indicates the type of the file or directory. In this case, it's a regular file because it starts with a hyphen (`-`). `d` is for directory.
     - The next three characters (`rwx`) represent the permissions for the owner (`tcboony`). `r` indicates read permission, `w` indicates write permission, and `x` indicates execute permission. In this case, the owner has read (`r`), write (`w`), and execute (`x`) permissions.
     - The next three characters (`r-x`) represent the permissions for the group (`staff`). In this case, the group has read (`r`) and execute (`x`) permissions, but does not have write permission (`-`).
     - The last three characters (`r--`) represent the permissions for others (users not in the owner's group). In this case, others have only read (`r`) permission, but do not have write or execute permissions (`--`).
@@ -112,7 +112,7 @@ Therefor:
 - `-wx` = 0 + 2 + 1 = 3
 - `--x` = 0 + 0 + 1 = 1
 
-I you want to set file permissions to `rw-r--r--`, you would assign the numeric value 644, where:
+If you want to set file permissions to `rw-r--r--`, you would assign the numeric value 644, where:
 
 - Owner permissions = 6 (read + write)
 - Group permissions = 4 (read)
