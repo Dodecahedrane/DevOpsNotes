@@ -146,10 +146,10 @@ chmod a+x testfile.txt
 
 The + adds the permission
 
-Nothing before = user
+- ``u`` = user
 - ``g`` = Group
 - ``o`` = Other
-- ``a`` = all
+- ``a`` = all (or nothing at all before the +/-)
 
 - Take write permissions away from Group
 ```bash
