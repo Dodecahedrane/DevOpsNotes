@@ -21,7 +21,7 @@ ls -l
 Output
 
 ```bash
--rwxrwxr-x 1 azureuser adminuser 223 Mar  7 14:47 prov-nginx.sh
+-rwxrwxr-x 1 adminuser usergroup 223 Mar  7 14:47 prov-nginx.sh
 ```
 
 For the file ``prov-nginx.sh`` the owner is ``adminuser``

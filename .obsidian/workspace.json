@@ -47,6 +47,19 @@
             }
           },
           {
+            "id": "bae5ead68ca32e83",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Linux/Bash Scripts.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "7ab785249f92062e",
             "type": "leaf",
             "state": {
@@ -189,11 +202,11 @@
   },
   "active": "7275092c68a20410",
   "lastOpenFiles": [
+    "Cloud/Linux/Bash Scripts.md",
+    "Cloud/Linux/File Ownership and Permissions.md",
     "Cloud/Linux/Group.md",
     "Cloud/Linux/Basic Linux Commands.md",
-    "Cloud/Linux/File Ownership and Permissions.md",
     "Cloud/Linux/Processes.md",
-    "Cloud/Linux/Bash Scripts.md",
     "Cloud/Linux/Linux Environment Variables.md",
     "Cloud/Linux/Linux.md",
     "Python/Python Scripting.md",
