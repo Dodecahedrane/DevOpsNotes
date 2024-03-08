@@ -51,7 +51,7 @@ chown <owner>:<group> <file_or_directory>
 
 ### Do Owners have full permissions on a file?
 
-By default yes, the owner will have full permissions for that file, if they choose to enable them (eg, execute)
+By default yes, the owner will have full permissions for that file, if they choose to enable them (eg, execute). By default its just read and write permissions.
 ### If you give permissions to the User entity, what does this mean?
 
 When you give permissions to the "User" entity, you're specifying the permissions for the owner of the file or directory. This means you're setting permissions for the user who created the file or directory.
