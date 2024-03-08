@@ -125,6 +125,19 @@
                 }
               },
               {
+                "id": "9b21f828f8005577",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Cloud/Linux/Processes.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
                 "id": "4651eaafca93dc69",
                 "type": "leaf",
                 "state": {
@@ -270,9 +283,10 @@
   },
   "active": "6fe9c169b75af7ce",
   "lastOpenFiles": [
-    "Cloud/Linux/Bash Scripts.md",
-    "Cloud/Azure/Deploying Test Application.md",
+    "Cloud/Linux/Processes.md",
     "Cloud/Linux/Basic Linux Commands.md",
+    "Cloud/Azure/Deploying Test Application.md",
+    "Cloud/Linux/Bash Scripts.md",
     "Cloud/Azure/Azure SSH.md",
     "Attachments/Pasted image 20240308125134.png",
     "Attachments/Pasted image 20240308125053.png",
@@ -281,7 +295,6 @@
     "Attachments/Pasted image 20240308124222.png",
     "Attachments/Pasted image 20240308123230.png",
     "Cloud/Azure/Create a VM on Azure.md",
-    "Cloud/Linux/Processes.md",
     "Cloud/Linux/File Ownership and Permissions.md",
     "Cloud/Linux/Group.md",
     "Cloud/Linux/Linux Environment Variables.md",
