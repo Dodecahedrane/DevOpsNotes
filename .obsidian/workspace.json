@@ -4,76 +4,114 @@
     "type": "split",
     "children": [
       {
-        "id": "27e90e8ad5d56498",
-        "type": "tabs",
+        "id": "2a753694cd85fe0e",
+        "type": "split",
         "children": [
           {
-            "id": "6acb33ed366e1d1b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Linux/Basic Linux Commands.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+            "id": "27e90e8ad5d56498",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "6acb33ed366e1d1b",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Cloud/Linux/Basic Linux Commands.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "d46b227b9a0f1449",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Cloud/Linux/Group.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "7275092c68a20410",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Cloud/Linux/File Ownership and Permissions.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "bae5ead68ca32e83",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Cloud/Linux/Bash Scripts.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "bd0ee82b0f103be2",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Cloud/Azure/Create a VM on Azure.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "6fe9c169b75af7ce",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Cloud/Azure/Deploying Test Application.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
               }
-            }
+            ]
           },
           {
-            "id": "d46b227b9a0f1449",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Linux/Group.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+            "id": "971276acf19a16cf",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "7ab785249f92062e",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Cloud/Azure/Azure Virtual Networks and Subnets.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
               }
-            }
-          },
-          {
-            "id": "7275092c68a20410",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Linux/File Ownership and Permissions.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bae5ead68ca32e83",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Linux/Bash Scripts.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7ab785249f92062e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Linux/Processes.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
+            ]
           }
         ],
-        "currentTab": 4
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -139,7 +177,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/Linux/Processes.md",
+                "file": "Cloud/Linux/Basic Linux Commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +194,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/Linux/Processes.md",
+                "file": "Cloud/Linux/Basic Linux Commands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +217,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud/Linux/Processes.md"
+                "file": "Cloud/Linux/Basic Linux Commands.md"
               }
             }
           }
@@ -200,11 +238,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7ab785249f92062e",
+  "active": "6acb33ed366e1d1b",
   "lastOpenFiles": [
+    "Cloud/Azure/Deploying Test Application.md",
+    "Cloud/Azure/Azure SSH.md",
+    "Attachments/Pasted image 20240308125134.png",
+    "Attachments/Pasted image 20240308125053.png",
+    "Attachments/Pasted image 20240308124823.png",
+    "Cloud/Azure/Azure Virtual Networks and Subnets.md",
+    "Attachments/Pasted image 20240308124222.png",
+    "Attachments/Pasted image 20240308123230.png",
+    "Cloud/Azure/Create a VM on Azure.md",
+    "Cloud/Linux/Processes.md",
     "Cloud/Linux/File Ownership and Permissions.md",
     "Cloud/Linux/Basic Linux Commands.md",
-    "Cloud/Linux/Processes.md",
     "Cloud/Linux/Group.md",
     "Cloud/Linux/Bash Scripts.md",
     "Cloud/Linux/Linux Environment Variables.md",
@@ -212,7 +259,6 @@
     "Python/Python Scripting.md",
     "Bash Script.md",
     "Python/Libraries, Modules, Packages.md",
-    "Cloud/Azure/Azure SSH.md",
     "Cloud/Linux/Linux Directory Structure.md",
     "Cloud/SSH.md",
     "Git Commands.md",
@@ -225,25 +271,16 @@
     "Cloud/Linux",
     "Cloud/Azure",
     "Cloud/Azure VM Basics.md",
-    "Cloud/Azure/Create a VM on Azure.md",
     "Attachments/Pasted image 20240307094654.png",
     "Pasted image 20240307094336.png",
-    "Attachments/Pasted image 20240307090804.png",
     "Attachments/git-cheat-sheet.pdf",
     "Markdown.md",
     "Attachments/linux-commands-handbook.pdf",
     "Attachments",
     "Untitled.md",
-    "Attachments/Pasted image 20240307093219.png",
-    "Attachments/Pasted image 20240307093159.png",
-    "Attachments/Pasted image 20240307092320.png",
-    "Attachments/Pasted image 20240307091934.png",
     "Cloud/The Cloud.md",
     "Cloud",
     "Python/JSON and YAML/JSON.md",
-    "Python/Collections/Collections.md",
-    "Python/APIs/Request Library.md",
-    "Python/Collections/Tuples.md",
-    "Python/JSON and YAML/YAML.md"
+    "Python/Collections/Collections.md"
   ]
 }

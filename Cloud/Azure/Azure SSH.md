@@ -20,7 +20,7 @@ ssh -i <path to the .pem file> username@<ipaddress of the VM>
 ```
 
 ```bash
-ssh -i .\tech257-oliver-learn-linux-vm-key.pem oliver@172.187.157.145
+ssh -i .\tech257-oliver-linux-vm-key.pem oliver@172.187.157.145
 ```
 
 Type Yes and press Enter if it does not recognize the host 

@@ -421,3 +421,15 @@ systemctl is-enabled nginx
 ```bash
 sudo systemctl enable nginx
 ```
+
+## OS Details
+
+```bash
+uname -a
+```
+
+Output
+
+```bash
+Linux tech257-oliver-linux 6.5.0-1016-azure #16~22.04.1-Ubuntu SMP Fri Feb 16 15:42:02 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+```
