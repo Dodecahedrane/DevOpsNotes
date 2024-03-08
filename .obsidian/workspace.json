@@ -10,6 +10,7 @@
           {
             "id": "27e90e8ad5d56498",
             "type": "tabs",
+            "dimension": 71.17021276595744,
             "children": [
               {
                 "id": "6acb33ed366e1d1b",
@@ -89,11 +90,13 @@
                   }
                 }
               }
-            ]
+            ],
+            "currentTab": 5
           },
           {
             "id": "971276acf19a16cf",
             "type": "tabs",
+            "dimension": 28.829787234042552,
             "children": [
               {
                 "id": "7ab785249f92062e",
@@ -107,8 +110,35 @@
                     "source": false
                   }
                 }
+              },
+              {
+                "id": "ceb86733dd3e17be",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Cloud/Linux/Basic Linux Commands.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "4651eaafca93dc69",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Cloud/Linux/Bash Scripts.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
               }
-            ]
+            ],
+            "currentTab": 2
           }
         ],
         "direction": "horizontal"
@@ -177,7 +207,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/Linux/Basic Linux Commands.md",
+                "file": "Cloud/Azure/Deploying Test Application.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -194,7 +224,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/Linux/Basic Linux Commands.md",
+                "file": "Cloud/Azure/Deploying Test Application.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -217,7 +247,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud/Linux/Basic Linux Commands.md"
+                "file": "Cloud/Azure/Deploying Test Application.md"
               }
             }
           }
@@ -238,9 +268,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6acb33ed366e1d1b",
+  "active": "6fe9c169b75af7ce",
   "lastOpenFiles": [
+    "Cloud/Linux/Bash Scripts.md",
     "Cloud/Azure/Deploying Test Application.md",
+    "Cloud/Linux/Basic Linux Commands.md",
     "Cloud/Azure/Azure SSH.md",
     "Attachments/Pasted image 20240308125134.png",
     "Attachments/Pasted image 20240308125053.png",
@@ -251,9 +283,7 @@
     "Cloud/Azure/Create a VM on Azure.md",
     "Cloud/Linux/Processes.md",
     "Cloud/Linux/File Ownership and Permissions.md",
-    "Cloud/Linux/Basic Linux Commands.md",
     "Cloud/Linux/Group.md",
-    "Cloud/Linux/Bash Scripts.md",
     "Cloud/Linux/Linux Environment Variables.md",
     "Cloud/Linux/Linux.md",
     "Python/Python Scripting.md",
