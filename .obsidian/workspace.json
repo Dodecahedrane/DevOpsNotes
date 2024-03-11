@@ -149,7 +149,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5bc1b361942c56ca",
@@ -226,8 +227,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b56398c1a9dc3bf6",
+  "active": "ac1f676e2f8ef68b",
   "lastOpenFiles": [
+    "Attachments/Pasted image 20240311151825.png",
     "Cloud/Linux/Basic Linux Commands.md",
     "Cloud/Azure/Deploying Test Application.md",
     "Cloud/Azure/Azure Basics.md",

@@ -85,6 +85,10 @@ chmod 700 prov_nodejs.sh
 ```bash
 #!/bin/bash
 
+mkdir repo
+
+cd repo
+
 # non interactive (so no multi choice q)
 export DEBIAN_FRONTEND=noninteractive
 
@@ -94,11 +98,26 @@ sudo apt update
 # update
 sudo apt upgrade -y
 
+# git clone
+git clone https://github.com/Dodecahedrane/test-app
+
+# move app folder out of git folder
+mv test-app/app/ app/
+
+# remove git folder as not needed anymore
+sudo rm -r test-app/
+
 # install nginx
 sudo apt install nginx -y
 
 # enable nginx (it should by default.. but should do it just to make sure)
 sudo systemctl enable nginx
+
+# update nginx to redirect port 3000 to port 80
+sudo sed -i "s@try_files \$uri \$uri/ =404;@proxy_pass http://127.0.0.1:3000;@" /etc/nginx/sites-available/default
+
+# restart nginx
+sudo systemctl restart nginx
 
 # install nodejs version 20.x
 # https://github.com/nodesource/distributions/blob/master/README.md 
@@ -111,7 +130,12 @@ sudo npm install pm2 -g
 # this part assums the source files were copied across to the server
 cd app
 
+# this needs to be installed to make it work
+npm install express
+
 # stop existing pm2 app process if it is already running
+# this will error if it isnt running, but it doesnt cause an issue 
+# and allows for the rerunning of the script if required
 pm2 stop app
 
 # start the app with pm2 (in the background)
@@ -122,7 +146,11 @@ pm2 start app.js
 
 Navigate to
 
-> [http://<public-ip-address\>:3000/](http://<public-ip-address\>:3000/)
+To see NodeJS Server Directly:
+[http://<public-ip-address\>:3000/](http://<public-ip-address\>:3000/)
+
+To Check Reverse Nginx Proxy
+[http://<public-ip-address\>](http://<public-ip-address\>)
 
 You should see
 
@@ -200,3 +228,19 @@ rsync -avz -e "ssh -i <ssh-key>" <local-file-path> <user>@<ip-address>:<remote-f
 *for reference next week*
 
 ![[Pasted image 20240308164830.png]]
+
+
+## Azure User Data (run script on VM creation automatically!)
+
+When creating a VM set the user data in the Advanced tab
+
+![[Pasted image 20240311151825.png]]
+
+Just add the bash script in the user data section. this will run as the root user, not adminuser or any other user. So it is running from the root directory, make sure any relative file paths still work from the root directory (or use all absolute file paths)
+
+// TODO Run this and make sure it works as expected
+
+## Make an Azure Image for faster creation of a standardized VM image
+
+Install the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+

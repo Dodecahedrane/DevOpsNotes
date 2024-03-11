@@ -433,3 +433,19 @@ Output
 ```bash
 Linux tech257-oliver-linux 6.5.0-1016-azure #16~22.04.1-Ubuntu SMP Fri Feb 16 15:42:02 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 ```
+
+## Modify a line or part of a file with ``sed``
+
+[``sed`` Guide](https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux)
+
+```bash
+sed [options] commands [file-to-edit]
+```
+
+```bash
+sudo sed -i "s@try_files \$uri \$uri/ =404;@proxy_pass http://127.0.0.1:3000;@" ../../etc/nginx/sites-available/default
+```
+
+- `-i`: For editing files in place. That means the changes will be made directly to the file specified
+- `"s@try_files \$uri \$uri/ =404;@proxy_pass http://127.0.0.1:3000;@"`: This is the substitution command for `sed`. It's used to find the pattern `try_files $uri $uri/ =404;` and replace it with `proxy_pass http://127.0.0.1:3000;`. The `@` symbol is used as a delimiter instead of the more commonly seen `/` to avoid clashing with the `/` characters in the paths. The backslashes (`\`) before the `$uri` are escaping the dollar sign to prevent it from being interpreted as a special character by the shell.
+- `../../etc/nginx/sites-available/default`: This is the path to the file being edited.
