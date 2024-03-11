@@ -63,12 +63,16 @@ Virtual Network:
 - [x] Enable Nginx
 - [x] NodeJS - version 20.x (this also installs ``npm``)
 - [x] ``app`` folder for source
+	- [x] Git Clone
+	- [x] Reorganize Folder Structure
 - [x] Source in ``app`` folder
 - [x] ``npm install`` (within ``app`` folder)
 - [x] ``npm start`` (within ``app`` folder)
 - [x] install ``pm2``
 - [x] run app with ``pm2``
+- [x] Configure Nginx as reverse proxy
 - [x] Test bash script on fresh VM
+
 
 ### Install Script
 
