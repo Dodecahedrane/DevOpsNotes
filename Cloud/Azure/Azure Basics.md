@@ -2,19 +2,32 @@
 
 ## Regions and Availability Zones
 
+Regions are geographical areas
 
+Availability Zones are data centers within a region
 
 ## VMs Resources
 
-
-
+- Resource groups:
+    - Group related resources (e.g., VMs, databases) for easier management and access control.
+    - Subscriptions: Represent a billing unit for your Azure usage. You can have multiple subscriptions for different projects or cost centers.
+    - Management groups: Optionally organize multiple subscriptions for centralized governance and policy application across your Azure environment.
 ## Azure Products
 
-
+- Compute: Virtual Machines (VMs), containers, Serverless functions for building and running applications.
+- Storage: Blob storage for unstructured data, disk storage for VMs, databases for structured data.
+- Networking: Virtual networks, firewalls, load balancers for connecting and securing your resources.
+- Management: Tools for monitoring, managing, and automating your Azure resources.
+- Security: Identity and access management, data encryption, threat protection solutions.
+- Artificial Intelligence: Machine learning, cognitive services, and other AI tools for building intelligent applications.
+- Web & Mobile: Tools for building and deploying web and mobile applications.
+- Data & Analytics: Services for storing, managing, and analyzing big data.
 
 ## Azure Pricing Calculator
 
-
+- The Azure Pricing Calculator is an invaluable resource for estimating the cost of using various Azure services.
+- You can specify the resources you plan to use (e.g., VM type, storage size) and the duration of use to get a personalized cost estimate.
+- This helps you plan your budget and choose cost-effective solutions for your needs.
 
 # Create  VM
 

@@ -78,7 +78,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md",
+                "file": "Cloud/Azure/Azure Basics.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -149,8 +149,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5bc1b361942c56ca",
@@ -166,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md",
+                "file": "Cloud/Azure/Azure Basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +182,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md",
+                "file": "Cloud/Azure/Azure Basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +205,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md"
+                "file": "Cloud/Azure/Azure Basics.md"
               }
             }
           }
@@ -229,8 +228,8 @@
   },
   "active": "ac1f676e2f8ef68b",
   "lastOpenFiles": [
-    "Cloud/Azure/Create a VM on Azure.md",
     "Cloud/Azure/Deploying Test Application.md",
+    "Cloud/Azure/Create a VM on Azure.md",
     "Cloud/Linux/Basic Linux Commands.md",
     "Markdown.md",
     "Git Commands.md",
