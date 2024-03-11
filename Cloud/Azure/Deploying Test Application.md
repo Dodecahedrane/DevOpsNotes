@@ -40,8 +40,10 @@ This is the web server VM set up correctly.
 ## MongoDB Database Server VM Resource Config
 
 OS: Ubuntu 22.04LTS
-Type: B1s VM
+Type: B1s
 Storage: Standard SSD
+Security Type: Standard
+	![[Pasted image 20240311155748.png]]
 Virtual Network:
 	*See [[Azure Virtual Networks and Subnets]] for details*
 	10.0.0.0/16 Virtual Network
@@ -49,6 +51,8 @@ Virtual Network:
 	Public Subnet: 10.0.2.0/24
 	Private Subnet:  10.0.3.0/24  (It will be a member of this Subnet)
 	*These Subnets should already exist from when we created them for the previous web VM.*
+
+
 ## Set Up Web Server App
 
 **We will make a note and save these commands, taking note on if they require user input (as the automation script wont take any user input)**
@@ -229,11 +233,6 @@ rsync -avz -e "ssh -i <ssh-key>" <local-file-path> <user>@<ip-address>:<remote-f
 ``-avz`` transfers with file compression
 ``-e`` is the argument for the SSH command
 
-*for reference next week*
-
-![[Pasted image 20240308164830.png]]
-
-
 ## Azure User Data (run script on VM creation automatically!)
 
 When creating a VM set the user data in the Advanced tab
@@ -244,7 +243,89 @@ Just add the bash script in the user data section. this will run as the root use
 
 // TODO Run this and make sure it works as expected
 
-## Make an Azure Image for faster creation of a standardized VM image
+## Make an Azure VM Image for faster creation of a standardized VM
 
 Install the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 
+In the VM run these commands to prepare the VM to be imaged
+
+This will remove the all the users and their home directories!
+
+```bash
+sudo waagent -deprovision+user
+```
+
+Log into Azure on the CLI
+
+```bash
+az login
+```
+
+View Account
+
+```bash
+az account show
+```
+
+Output
+
+```bash
+{
+  "environmentName": "AzureCloud",
+  "homeTenantId": "ff15c67c-2870-4e9f-adc1-7d61d855b667",
+  "id": "cd36dfff-6e85-4164-b64e-b4078a773259",
+  "isDefault": true,
+  "managedByTenants": [],
+  "name": "Azure Training",
+  "state": "Enabled",
+  "tenantId": "ff15c67c-2870-4e9f-adc1-7d61d855b667",
+  "user": {
+    "name": "OGuy@spartaglobal.com",
+    "type": "user"
+  }
+}
+```
+
+Stop VM
+
+```bash
+az vm deallocate --resource-group <resource-group> --name <vm-name>
+```
+
+```bash
+az vm deallocate --resource-group tech257 --name tech257-oliver
+```
+
+Generalize VM image
+
+```bash
+az vm generalize --resource-group <yourResourceGroup> --name <yourVMName>
+```
+
+```bash
+az vm generalize --resource-group tech257 --name tech257-oliver
+```
+
+In Portal click Capture
+
+![[Pasted image 20240311155107.png]]
+
+Fill out details, click create, be aware this will destroy this instance of the VM.
+
+Click create image
+
+To make an image from this VM
+
+Click 'See All Images'
+
+![[Pasted image 20240311161018.png]]
+
+Click 'My Images'
+
+![[Pasted image 20240311161047.png]]
+
+Select From List
+
+![[Pasted image 20240311161058.png]]
+
+Create the rest of the VM as standard following [[Create a VM on Azure]] guide

@@ -99,7 +99,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -166,7 +166,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +182,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -205,9 +203,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -227,11 +223,49 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ac1f676e2f8ef68b",
+  "floating": {
+    "id": "a7684722668938fc",
+    "type": "floating",
+    "children": [
+      {
+        "id": "d1e0f023a5802719",
+        "type": "window",
+        "children": [
+          {
+            "id": "81d79ea316ca622a",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "bc40962b1a83ae47",
+                "type": "leaf",
+                "state": {
+                  "type": "graph",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 631,
+        "y": 233,
+        "width": 2070,
+        "height": 1720,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "bc40962b1a83ae47",
   "lastOpenFiles": [
-    "Attachments/Pasted image 20240311151825.png",
     "Cloud/Linux/Basic Linux Commands.md",
     "Cloud/Azure/Deploying Test Application.md",
+    "Attachments/Pasted image 20240311161058.png",
+    "Attachments/Pasted image 20240311161047.png",
+    "Attachments/Pasted image 20240311161018.png",
+    "Attachments/Pasted image 20240311155748.png",
+    "Attachments/Pasted image 20240311155107.png",
+    "Attachments/Pasted image 20240311151825.png",
     "Cloud/Azure/Azure Basics.md",
     "Cloud/Azure/prov_nodejs.sh",
     "Cloud/Azure/Untitled.md",
@@ -243,10 +277,7 @@
     "Cloud/Azure/Azure SSH.md",
     "Attachments/Pasted image 20240308125134.png",
     "Attachments/Pasted image 20240308125053.png",
-    "Attachments/Pasted image 20240308124823.png",
     "Cloud/Azure/Azure Virtual Networks and Subnets.md",
-    "Attachments/Pasted image 20240308124222.png",
-    "Attachments/Pasted image 20240308123230.png",
     "Cloud/Linux/File Ownership and Permissions.md",
     "Cloud/Linux/Group.md",
     "Cloud/Linux/Linux Environment Variables.md",
@@ -259,9 +290,6 @@
     "Git Commands.md",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
     "Cloud/Linux/sudo.md",
-    "Attachments/Pasted image 20240307112610.png",
-    "Attachments/Pasted image 20240307112541.png",
-    "Attachments/Pasted image 20240307112442.png",
     "Cloud/Linux",
     "Cloud/Azure",
     "Cloud/Azure VM Basics.md",

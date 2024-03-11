@@ -449,3 +449,31 @@ sudo sed -i "s@try_files \$uri \$uri/ =404;@proxy_pass http://127.0.0.1:3000;@" 
 - `-i`: For editing files in place. That means the changes will be made directly to the file specified
 - `"s@try_files \$uri \$uri/ =404;@proxy_pass http://127.0.0.1:3000;@"`: This is the substitution command for `sed`. It's used to find the pattern `try_files $uri $uri/ =404;` and replace it with `proxy_pass http://127.0.0.1:3000;`. The `@` symbol is used as a delimiter instead of the more commonly seen `/` to avoid clashing with the `/` characters in the paths. The backslashes (`\`) before the `$uri` are escaping the dollar sign to prevent it from being interpreted as a special character by the shell.
 - `../../etc/nginx/sites-available/default`: This is the path to the file being edited.
+
+## How to transfer files from one machine to another
+
+### ``scp``
+
+```bash
+scp -i ~/.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem -r app/ adminuser@172.167.178.177:~/
+```
+
+```bash
+scp -i <ssh-key> -r <local-file-path> <user-name>@<ip-address>:<remote-file-path>
+```
+
+``-r`` is for recursive transfer
+### ``rsync``
+
+``rsync`` is a lot faster than ``scp``, and can resume transfers if they fail because of a lost connection
+
+```bash
+rsync -avz -e "ssh -i ../../.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem" ./app adminuser@172.167.178.177:~/
+```
+
+```bash
+rsync -avz -e "ssh -i <ssh-key>" <local-file-path> <user>@<ip-address>:<remote-file-path>
+```
+
+``-avz`` transfers with file compression
+``-e`` is the argument for the SSH command
