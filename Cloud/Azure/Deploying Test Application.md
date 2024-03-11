@@ -39,7 +39,16 @@ This is the web server VM set up correctly.
 
 ## MongoDB Database Server VM Resource Config
 
-//TODO
+OS: Ubuntu 22.04LTS
+Type: B1s VM
+Storage: Standard SSD
+Virtual Network:
+	*See [[Azure Virtual Networks and Subnets]] for details*
+	10.0.0.0/16 Virtual Network
+2 Subnets:
+	Public Subnet: 10.0.2.0/24
+	Private Subnet:  10.0.3.0/24  (It will be a member of this Subnet)
+	*These Subnets should already exist from when we created them for the previous web VM.*
 ## Set Up Web Server App
 
 **We will make a note and save these commands, taking note on if they require user input (as the automation script wont take any user input)**
@@ -66,9 +75,8 @@ This is the web server VM set up correctly.
 #### Create Script
 
 ```bash
-touch prov_nodejs.sh
 nano prov_nodejs.sh
-chmod u+x prov_nodejs.sh
+chmod 700 prov_nodejs.sh
 ./prov_nodejs.sh
 ```
 
@@ -77,7 +85,7 @@ chmod u+x prov_nodejs.sh
 ```bash
 #!/bin/bash
 
-# non interactive (so no multi choice q
+# non interactive (so no multi choice q)
 export DEBIAN_FRONTEND=noninteractive
 
 # upgrade
@@ -90,18 +98,21 @@ sudo apt upgrade -y
 sudo apt install nginx -y
 
 # enable nginx (it should by default.. but should do it just to make sure)
-sudo systemctl enable
+sudo systemctl enable nginx
 
 # install nodejs version 20.x
 # https://github.com/nodesource/distributions/blob/master/README.md 
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
 
+# install pm2 to run the nodejs server
+sudo npm install pm2 -g
+
 # this part assums the source files were copied across to the server
 cd app
 
-# install pm2 to run the nodejs server
-sudo npm install pm2 -g
+# stop existing pm2 app process if it is already running
+pm2 stop app
 
 # start the app with pm2 (in the background)
 pm2 start app.js
@@ -170,6 +181,7 @@ scp -i ~/.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem -r app/ adminuser@17
 scp -i <ssh-key> -r <local-file-path> <user-name>@<ip-address>:<remote-file-path>
 ```
 
+``-r`` is for recursive transfer
 ### ``rsync``
 
 This is running in WSL as its not natively available on Windows.
@@ -181,6 +193,9 @@ rsync -avz -e "ssh -i ../../.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem" 
 ```bash
 rsync -avz -e "ssh -i <ssh-key>" <local-file-path> <user>@<ip-address>:<remote-file-path>
 ```
+
+``-avz`` transfers with file compression
+``-e`` is the argument for the SSH command
 
 *for reference next week*
 

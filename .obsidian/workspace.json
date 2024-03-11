@@ -4,157 +4,102 @@
     "type": "split",
     "children": [
       {
-        "id": "2a753694cd85fe0e",
-        "type": "split",
+        "id": "27e90e8ad5d56498",
+        "type": "tabs",
         "children": [
           {
-            "id": "27e90e8ad5d56498",
-            "type": "tabs",
-            "dimension": 71.17021276595744,
-            "children": [
-              {
-                "id": "6acb33ed366e1d1b",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Cloud/Linux/Basic Linux Commands.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "d46b227b9a0f1449",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Cloud/Linux/Group.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "7275092c68a20410",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Cloud/Linux/File Ownership and Permissions.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "bae5ead68ca32e83",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Cloud/Linux/Bash Scripts.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "bd0ee82b0f103be2",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Cloud/Azure/Create a VM on Azure.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "ac1f676e2f8ef68b",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Cloud/Azure/Deploying Test Application.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
+            "id": "6acb33ed366e1d1b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Linux/Basic Linux Commands.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
-            ],
-            "currentTab": 5
+            }
           },
           {
-            "id": "971276acf19a16cf",
-            "type": "tabs",
-            "dimension": 28.829787234042552,
-            "children": [
-              {
-                "id": "7ab785249f92062e",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Cloud/Azure/Azure Virtual Networks and Subnets.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "ceb86733dd3e17be",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Cloud/Linux/Basic Linux Commands.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "9b21f828f8005577",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Cloud/Linux/Processes.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "4651eaafca93dc69",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Cloud/Linux/Bash Scripts.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
+            "id": "d46b227b9a0f1449",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Linux/Group.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
-            ],
-            "currentTab": 2
+            }
+          },
+          {
+            "id": "7275092c68a20410",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Linux/File Ownership and Permissions.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bae5ead68ca32e83",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Linux/Bash Scripts.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bd0ee82b0f103be2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Azure/Create a VM on Azure.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ac1f676e2f8ef68b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Azure/Deploying Test Application.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ea35c518560512a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Linux/Basic Linux Commands.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "direction": "horizontal"
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -281,16 +226,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ac1f676e2f8ef68b",
+  "active": "b56398c1a9dc3bf6",
   "lastOpenFiles": [
+    "Cloud/Linux/Basic Linux Commands.md",
+    "Cloud/Azure/Deploying Test Application.md",
+    "Cloud/Azure/Azure Basics.md",
     "Cloud/Azure/prov_nodejs.sh",
     "Cloud/Azure/Untitled.md",
-    "Cloud/Azure/Deploying Test Application.md",
     "Cloud/Azure/Create a VM on Azure.md",
     "Cloud/Linux/Processes.md",
     "Attachments/Pasted image 20240308165409.png",
     "Attachments/Pasted image 20240308164830.png",
-    "Cloud/Linux/Basic Linux Commands.md",
     "Cloud/Linux/Bash Scripts.md",
     "Cloud/Azure/Azure SSH.md",
     "Attachments/Pasted image 20240308125134.png",
@@ -309,7 +255,6 @@
     "Cloud/Linux/Linux Directory Structure.md",
     "Cloud/SSH.md",
     "Git Commands.md",
-    "Cloud/Azure/Azure Basics.md",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
     "Cloud/Linux/sudo.md",
     "Attachments/Pasted image 20240307112610.png",
