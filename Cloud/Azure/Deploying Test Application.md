@@ -314,7 +314,7 @@ Fill out details, click create, be aware this will destroy this instance of the 
 
 Click create image
 
-To make an image from this VM
+To make an image from this VM, this will only work if the VM is set to security type of 'Standard'. Otherwise you wont be able to make an image.
 
 Click 'See All Images'
 
