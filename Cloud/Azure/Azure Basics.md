@@ -11,7 +11,9 @@ Availability Zones are data centers within a region
 - Resource groups:
     - Group related resources (e.g., VMs, databases) for easier management and access control.
     - Subscriptions: Represent a billing unit for your Azure usage. You can have multiple subscriptions for different projects or cost centers.
-    - Management groups: Optionally organize multiple subscriptions for centralized governance and policy application across your Azure environment.
+    - Management groups: Optionally organize multiple subscriptions for centralized governance and policy application across your Azure environment. Control resource groups (allow only certain resources/VM sizes) and control what certain users can/can't do
+    
+![[Pasted image 20240312105540.png]]
 ## Azure Products
 
 - Compute: Virtual Machines (VMs), containers, Serverless functions for building and running applications.
@@ -28,6 +30,8 @@ Availability Zones are data centers within a region
 - The Azure Pricing Calculator is an invaluable resource for estimating the cost of using various Azure services.
 - You can specify the resources you plan to use (e.g., VM type, storage size) and the duration of use to get a personalized cost estimate.
 - This helps you plan your budget and choose cost-effective solutions for your needs.
+
+There is also a TCO calculator
 
 # Create  VM
 

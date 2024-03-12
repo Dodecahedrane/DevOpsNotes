@@ -97,14 +97,11 @@ mkdir repo
 
 cd repo
 
-# non interactive (so no multi choice q)
-export DEBIAN_FRONTEND=noninteractive
-
 # upgrade
-sudo apt update
+sudo apt-get update
 
 # update
-sudo apt upgrade -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
 # git clone
 git clone https://github.com/Dodecahedrane/test-app
@@ -116,7 +113,7 @@ mv test-app/app/ app/
 sudo rm -r test-app/
 
 # install nginx
-sudo apt install nginx -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get install nginx -y
 
 # enable nginx (it should by default.. but should do it just to make sure)
 sudo systemctl enable nginx
@@ -130,7 +127,8 @@ sudo systemctl restart nginx
 # install nodejs version 20.x
 # https://github.com/nodesource/distributions/blob/master/README.md 
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
+
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
 
 # install pm2 to run the nodejs server
 sudo npm install pm2 -g
@@ -214,4 +212,16 @@ When creating a VM set the user data in the Advanced tab
 
 Just add the bash script in the user data section. this will run as the root user, not adminuser or any other user. So it is running from the root directory, make sure any relative file paths still work from the root directory (or use all absolute file paths - this is probably best practice, as then the script can be ran anywhere)
 
-// TODO Run this and make sure it works as expected
+It can take several minutes before the user data script runs, it is not immediately ran on VM created.
+
+You can create an image with all the dependencies installed and just run the commands required to start the services in the user data.
+
+In the case of the web front end this would be
+
+```bash
+#!/bin/bash
+
+cd repo
+cd app
+pm2 start app.js
+```

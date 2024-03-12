@@ -125,7 +125,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -191,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/Linux/Basic Linux Commands.md",
+                "file": "Cloud/Azure/Deploying Test Application.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -208,7 +208,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/Linux/Basic Linux Commands.md",
+                "file": "Cloud/Azure/Deploying Test Application.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -231,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud/Linux/Basic Linux Commands.md"
+                "file": "Cloud/Azure/Deploying Test Application.md"
               }
             }
           }
@@ -252,12 +252,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ea35c518560512a0",
+  "active": "c01c0a068acb7b94",
   "lastOpenFiles": [
-    "Cloud/Azure/Azure VM Image Creation.md",
-    "Cloud/Azure/Deploying Test Application.md",
     "Cloud/Linux/Basic Linux Commands.md",
+    "Cloud/Azure/Deploying Test Application.md",
     "Cloud/Azure/Azure Basics.md",
+    "Attachments/Pasted image 20240312105540.png",
+    "Cloud/Azure/Azure VM Image Creation.md",
     "Cloud/Azure/Create a VM on Azure.md",
     "Markdown.md",
     "Git Commands.md",
@@ -275,7 +276,6 @@
     "Cloud/Linux/Bash Scripts.md",
     "Cloud/Azure/Azure SSH.md",
     "Attachments/Pasted image 20240308125134.png",
-    "Attachments/Pasted image 20240308125053.png",
     "Cloud/Azure/Azure Virtual Networks and Subnets.md",
     "Cloud/Linux/File Ownership and Permissions.md",
     "Cloud/Linux/Group.md",
