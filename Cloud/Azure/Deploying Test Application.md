@@ -205,33 +205,6 @@ pm stop <id>
 ```
 
 The ``<id>`` is the id from ``pm2 list``. So in the case of the above output, ``0``
-## How to transfer files from one machine to another
-
-### ``scp``
-
-```bash
-scp -i ~/.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem -r app/ adminuser@172.167.178.177:~/
-```
-
-```bash
-scp -i <ssh-key> -r <local-file-path> <user-name>@<ip-address>:<remote-file-path>
-```
-
-``-r`` is for recursive transfer
-### ``rsync``
-
-This is running in WSL as its not natively available on Windows.
-
-```bash
-rsync -avz -e "ssh -i ../../.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem" ./app adminuser@172.167.178.177:~/
-```
-
-```bash
-rsync -avz -e "ssh -i <ssh-key>" <local-file-path> <user>@<ip-address>:<remote-file-path>
-```
-
-``-avz`` transfers with file compression
-``-e`` is the argument for the SSH command
 
 ## Azure User Data (run script on VM creation automatically!)
 
@@ -239,93 +212,6 @@ When creating a VM set the user data in the Advanced tab
 
 ![[Pasted image 20240311151825.png]]
 
-Just add the bash script in the user data section. this will run as the root user, not adminuser or any other user. So it is running from the root directory, make sure any relative file paths still work from the root directory (or use all absolute file paths)
+Just add the bash script in the user data section. this will run as the root user, not adminuser or any other user. So it is running from the root directory, make sure any relative file paths still work from the root directory (or use all absolute file paths - this is probably best practice, as then the script can be ran anywhere)
 
 // TODO Run this and make sure it works as expected
-
-## Make an Azure VM Image for faster creation of a standardized VM
-
-Install the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-
-In the VM run these commands to prepare the VM to be imaged
-
-This will remove the all the users and their home directories!
-
-```bash
-sudo waagent -deprovision+user
-```
-
-Log into Azure on the CLI
-
-```bash
-az login
-```
-
-View Account
-
-```bash
-az account show
-```
-
-Output
-
-```bash
-{
-  "environmentName": "AzureCloud",
-  "homeTenantId": "ff15c67c-2870-4e9f-adc1-7d61d855b667",
-  "id": "cd36dfff-6e85-4164-b64e-b4078a773259",
-  "isDefault": true,
-  "managedByTenants": [],
-  "name": "Azure Training",
-  "state": "Enabled",
-  "tenantId": "ff15c67c-2870-4e9f-adc1-7d61d855b667",
-  "user": {
-    "name": "OGuy@spartaglobal.com",
-    "type": "user"
-  }
-}
-```
-
-Stop VM
-
-```bash
-az vm deallocate --resource-group <resource-group> --name <vm-name>
-```
-
-```bash
-az vm deallocate --resource-group tech257 --name tech257-oliver
-```
-
-Generalize VM image
-
-```bash
-az vm generalize --resource-group <yourResourceGroup> --name <yourVMName>
-```
-
-```bash
-az vm generalize --resource-group tech257 --name tech257-oliver
-```
-
-In Portal click Capture
-
-![[Pasted image 20240311155107.png]]
-
-Fill out details, click create, be aware this will destroy this instance of the VM.
-
-Click create image
-
-To make an image from this VM, this will only work if the VM is set to security type of 'Standard'. Otherwise you wont be able to make an image.
-
-Click 'See All Images'
-
-![[Pasted image 20240311161018.png]]
-
-Click 'My Images'
-
-![[Pasted image 20240311161047.png]]
-
-Select From List
-
-![[Pasted image 20240311161058.png]]
-
-Create the rest of the VM as standard following [[Create a VM on Azure]] guide

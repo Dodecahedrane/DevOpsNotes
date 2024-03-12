@@ -443,6 +443,10 @@ sed [options] commands [file-to-edit]
 ```
 
 ```bash
+sed -i "s@<contents-to-find>@<contents-to-replace-it-with>@" <file-path>
+```
+
+```bash
 sudo sed -i "s@try_files \$uri \$uri/ =404;@proxy_pass http://127.0.0.1:3000;@" ../../etc/nginx/sites-available/default
 ```
 
@@ -451,6 +455,10 @@ sudo sed -i "s@try_files \$uri \$uri/ =404;@proxy_pass http://127.0.0.1:3000;@" 
 - `../../etc/nginx/sites-available/default`: This is the path to the file being edited.
 
 ## How to transfer files from one machine to another
+
+You can also transfer the files from your local machine with scp or rsync. 
+
+Rsync is a lot (lot) faster than scp, and has the ability to resume file transfers if they stop (either intertidally or due to technical failure)
 
 ### ``scp``
 
@@ -465,7 +473,7 @@ scp -i <ssh-key> -r <local-file-path> <user-name>@<ip-address>:<remote-file-path
 ``-r`` is for recursive transfer
 ### ``rsync``
 
-``rsync`` is a lot faster than ``scp``, and can resume transfers if they fail because of a lost connection
+This is running in WSL as its not natively available on Windows. It is native to Linux and MacOS
 
 ```bash
 rsync -avz -e "ssh -i ../../.ssh/Azure_tech257/tech257-oliver-linux-vm-key.pem" ./app adminuser@172.167.178.177:~/
