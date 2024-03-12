@@ -127,7 +127,6 @@ sudo systemctl restart nginx
 # install nodejs version 20.x
 # https://github.com/nodesource/distributions/blob/master/README.md 
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
-
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
 
 # install pm2 to run the nodejs server
@@ -224,4 +223,57 @@ In the case of the web front end this would be
 cd repo
 cd app
 pm2 start app.js
+```
+
+## Set Up MongoDB
+
+### Script
+
+```bash
+#!/bin/bash
+
+# upgrade
+sudo apt-get update
+
+# update
+sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
+
+# install mongodb version 7.0.5
+# following this guide:
+# https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu
+sudo DEBIAN_FRONTEND=noninteractive apt-get install gnupg curl -y
+
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+   --dearmor
+
+
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+
+sudo apt-get update
+
+# this installs the newest version, need to modify
+sudo apt-get install -y mongodb-org
+
+# this should work but doesnt
+#sudo apt-get install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=7.0.6 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6
+
+
+# this fixes the mongodb versions so if you apt upgrade, they are skipped
+echo "mongodb-org hold" | sudo dpkg --set-selections
+echo "mongodb-org-database hold" | sudo dpkg --set-selections
+echo "mongodb-org-server hold" | sudo dpkg --set-selections
+echo "mongodb-mongosh hold" | sudo dpkg --set-selections
+echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+
+ps --no-headers -o comm 1
+
+sudo systemctl daemon-reload
+
+sudo systemctl enable mongod
+
+sudo systemctl start mongod
+
+
 ```
