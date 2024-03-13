@@ -250,7 +250,7 @@ pm2 start app.js
 - [x] Restart MongoDB
 - [x] Add ``DB_HOST`` environment variable on Web VM
 - [x] Test as Script
-- [ ] Test as User Data
+- [x] Test as User Data
 
 ### Script
 
