@@ -94,7 +94,7 @@ chmod 700 prov_nodejs.sh
 #!/bin/bash
 
 # set DB_HOST env var where it equals the private IP of the MongoDB VM
-export DB_HOST=10.0.3.4
+export DB_HOST=mongodb://10.0.3.4:27017/posts
 
 mkdir repo
 
@@ -267,13 +267,13 @@ curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 
 # update to add mongodb packages
-sudo apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
 
 # this installs the newest version, need to modify
 #sudo apt-get install -y mongodb-org
 
-# this should work but doesnt
-sudo apt-get install -y mongodb-org=7.0.5 mongodb-org-database=7.0.5 mongodb-org-server=7.0.5 mongodb-mongosh mongodb-org-mongos=7.0.5 mongodb-org-tools=7.0.5
+# install correct version of mongodb
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y mongodb-org=7.0.5 mongodb-org-database=7.0.5 mongodb-org-server=7.0.5 mongodb-mongosh mongodb-org-mongos=7.0.5 mongodb-org-tools=7.0.5
 
 
 # this fixes the mongodb versions so if you apt upgrade, they are skipped
@@ -298,13 +298,8 @@ sudo sed -i "s@127.0.0.1@0.0.0.0@" /etc/mongod.conf
 sudo systemctl restart mongod
 ```
 
-![[Pasted image 20240313091329.png]]
+Once it works you should get this on the /posts page
 
-/etc/mongod.conf
-
-
-![[Pasted image 20240313093229.png]]
-
-Should get this on
+**IMAGE**
 
 [http://\<web-server-ip>/posts](http://<web-server-ip>/posts)
