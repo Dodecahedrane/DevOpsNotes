@@ -9,6 +9,8 @@ tags:
   - scp
   - SSH
 ---
+Here is the documentation for deploying the Sparta Test Application in a [[Two Tier Deployment]] architecture on Azure.
+
 ## Web Server VM Resource Config
 
 OS: Ubuntu 22.04LTS
@@ -141,8 +143,8 @@ cd app
 export DB_HOST=mongodb://10.0.3.4:27017/posts
 
 # this needs to be installed to make it work
-npm install
-npm install express
+sudo -E npm install
+sudo npm install express
 
 # stop existing pm2 app process if it is already running
 # this will error if it isnt running, but it doesnt cause an issue 
@@ -280,9 +282,6 @@ echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gp
 
 # update to add mongodb packages
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
-
-# this installs the newest version
-#sudo apt-get install -y mongodb-org
 
 # install correct version of mongodb, note different version of mongosh (as the office docs are wrong :( )
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=2.1.5 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6
