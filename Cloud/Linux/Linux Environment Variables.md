@@ -85,4 +85,8 @@ If you want to apply this to the current session run
 source .bashrc
 ```
 
-``
+## ``sudo`` access environment variables from *not* the users home directory
+
+```bash
+sudo -E <command>
+```

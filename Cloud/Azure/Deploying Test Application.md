@@ -52,7 +52,6 @@ Virtual Network:
 	Private Subnet:  10.0.3.0/24  (It will be a member of this Subnet)
 	*These Subnets should already exist from when we created them for the previous web VM.*
 
-
 ## Set Up Web Server App
 
 **We will make a note and save these commands, taking note on if they require user input (as the automation script wont take any user input)**
@@ -76,6 +75,9 @@ Virtual Network:
 - [x] run app with ``pm2``
 - [x] Configure Nginx as reverse proxy
 - [x] Test bash script on fresh VM
+- [x] Test as User Data
+- [x] Make Image
+- [x] Test partial User Data with Image
 
 
 ### Install Script
@@ -92,9 +94,6 @@ chmod 700 prov_nodejs.sh
 
 ```bash
 #!/bin/bash
-
-# set DB_HOST env var where it equals the private IP of the MongoDB VM
-export DB_HOST=mongodb://10.0.3.4:27017/posts
 
 mkdir repo
 
@@ -138,7 +137,11 @@ sudo npm install pm2 -g
 # this part assums the source files were copied across to the server
 cd app
 
+# set DB_HOST env var where it equals the private IP of the MongoDB VM
+export DB_HOST=mongodb://10.0.3.4:27017/posts
+
 # this needs to be installed to make it work
+npm install
 npm install express
 
 # stop existing pm2 app process if it is already running
@@ -164,9 +167,9 @@ You should see
 
 ![[Pasted image 20240308165409.png]]
 
-#### On the VM
+#### Validate it worked correctly with pm2 on the VM
 
-To see the running PM2 processes
+To see the running PM2 processes (this will only show if you ran the script, not if it was ran with user data (see bellow))
 
 ```bash
 pm2 list
@@ -216,7 +219,9 @@ Just add the bash script in the user data section. this will run as the root use
 
 It can take several minutes before the user data script runs, it is not immediately ran on VM created.
 
-You can create an image with all the dependencies installed and just run the commands required to start the services in the user data.
+### Image + User Data
+
+You can create an image ([[Azure VM Image Creation]]) with all the dependencies installed and just run the commands required to start the services in the user data.
 
 In the case of the web front end this would be
 
@@ -224,6 +229,11 @@ In the case of the web front end this would be
 #!/bin/bash
 
 cd repo/app
+export DB_HOST=mongodb://<mongo-db-ip>:27017/posts
+
+# this needs to be run to allow db connection
+npm install
+
 pm2 start app.js
 ```
 
@@ -234,11 +244,13 @@ pm2 start app.js
 - [x] ``sudo apt update``
 - [x] ``sudo apt upgrade``
 - [x] Install MongoDB
-	- [ ] Install MongoDB Version 7.0.5
+	- [x] Install MongoDB Version 7.0.5
 - [x] Change Bind IP
 - [x] Enable MongoDB
 - [x] Restart MongoDB
 - [x] Add ``DB_HOST`` environment variable on Web VM
+- [x] Test as Script
+- [ ] Test as User Data
 
 ### Script
 
@@ -269,11 +281,11 @@ echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gp
 # update to add mongodb packages
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 
-# this installs the newest version, need to modify
+# this installs the newest version
 #sudo apt-get install -y mongodb-org
 
-# install correct version of mongodb
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y mongodb-org=7.0.5 mongodb-org-database=7.0.5 mongodb-org-server=7.0.5 mongodb-mongosh mongodb-org-mongos=7.0.5 mongodb-org-tools=7.0.5
+# install correct version of mongodb, note different version of mongosh (as the office docs are wrong :( )
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=2.1.5 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6
 
 
 # this fixes the mongodb versions so if you apt upgrade, they are skipped
@@ -284,14 +296,9 @@ echo "mongodb-mongosh hold" | sudo dpkg --set-selections
 echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
 echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 
-# ps --no-headers -o comm 1
-
 sudo systemctl daemon-reload
-
 sudo systemctl enable mongod
-
 sudo systemctl start mongod
-
 
 sudo sed -i "s@127.0.0.1@0.0.0.0@" /etc/mongod.conf
 
@@ -300,6 +307,23 @@ sudo systemctl restart mongod
 
 Once it works you should get this on the /posts page
 
-**IMAGE**
-
 [http://\<web-server-ip>/posts](http://<web-server-ip>/posts)
+
+In the Web App/NodeJS server you need to set the DB_HOST environment variable to the connection string for the MongoDB server using the private subnet IP (10.0.3.x)
+
+To Do It Manually:
+
+```bash
+kill <pid-for-pm2>
+export DB_HOST=<mongo-db-conn-str>
+sudo -E npm install
+```
+
+Output:
+
+![[Pasted image 20240313125056.png]]
+
+
+On /pages:
+
+![[Pasted image 20240313122807.png]]
