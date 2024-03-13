@@ -309,7 +309,7 @@ Once it works you should get this on the /posts page
 
 [http://\<web-server-ip>/posts](http://<web-server-ip>/posts)
 
-In the Web App/NodeJS server you need to set the DB_HOST environment variable to the connection string for the MongoDB server using the private subnet IP (10.0.3.x)
+In the Web App/NodeJS server you need to set the DB_HOST environment variable to the connection string for the MongoDB server using the private subnet IP (10.0.3.x). If you were to deploy this using User Data, do the MongoDB VM first, then the NodeJS VM, making sure to copy the correct IP for the MongoDB VM correctly.
 
 To Do It Manually:
 
