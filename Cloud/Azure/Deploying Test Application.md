@@ -93,6 +93,9 @@ chmod 700 prov_nodejs.sh
 ```bash
 #!/bin/bash
 
+# set DB_HOST env var where it equals the private IP of the MongoDB VM
+export DB_HOST=10.0.3.4
+
 mkdir repo
 
 cd repo
@@ -220,12 +223,22 @@ In the case of the web front end this would be
 ```bash
 #!/bin/bash
 
-cd repo
-cd app
+cd repo/app
 pm2 start app.js
 ```
 
 ## Set Up MongoDB
+
+
+- [x] Ubuntu 22.04LTS
+- [x] ``sudo apt update``
+- [x] ``sudo apt upgrade``
+- [x] Install MongoDB
+	- [ ] Install MongoDB Version 7.0.5
+- [x] Change Bind IP
+- [x] Enable MongoDB
+- [x] Restart MongoDB
+- [x] Add ``DB_HOST`` environment variable on Web VM
 
 ### Script
 
@@ -241,22 +254,26 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 # install mongodb version 7.0.5
 # following this guide:
 # https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu
+
+# curl and gnupg required to install mongodb
 sudo DEBIAN_FRONTEND=noninteractive apt-get install gnupg curl -y
 
+# add mongodb GPG key to validate download of mongodb
 curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
    --dearmor
 
-
+# Create the `/etc/apt/sources.list.d/mongodb-org-7.0.list` file for Ubuntu 22.04
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 
+# update to add mongodb packages
 sudo apt-get update
 
 # this installs the newest version, need to modify
-sudo apt-get install -y mongodb-org
+#sudo apt-get install -y mongodb-org
 
 # this should work but doesnt
-#sudo apt-get install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=7.0.6 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6
+sudo apt-get install -y mongodb-org=7.0.5 mongodb-org-database=7.0.5 mongodb-org-server=7.0.5 mongodb-mongosh mongodb-org-mongos=7.0.5 mongodb-org-tools=7.0.5
 
 
 # this fixes the mongodb versions so if you apt upgrade, they are skipped
@@ -267,7 +284,7 @@ echo "mongodb-mongosh hold" | sudo dpkg --set-selections
 echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
 echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 
-ps --no-headers -o comm 1
+# ps --no-headers -o comm 1
 
 sudo systemctl daemon-reload
 
@@ -276,4 +293,18 @@ sudo systemctl enable mongod
 sudo systemctl start mongod
 
 
+sudo sed -i "s@127.0.0.1@0.0.0.0@" /etc/mongod.conf
+
+sudo systemctl restart mongod
 ```
+
+![[Pasted image 20240313091329.png]]
+
+/etc/mongod.conf
+
+
+![[Pasted image 20240313093229.png]]
+
+Should get this on
+
+[http://\<web-server-ip>/posts](http://<web-server-ip>/posts)
