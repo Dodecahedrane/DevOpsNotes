@@ -8,12 +8,25 @@
         "type": "tabs",
         "children": [
           {
-            "id": "693ea79b2982494b",
+            "id": "c9024716a55c4bed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md",
+                "file": "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a979af15514536de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Azure/Azure Blob Storage.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -70,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5bc1b361942c56ca",
@@ -87,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md",
+                "file": "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md",
+                "file": "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md"
+                "file": "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md"
               }
             }
           }
@@ -148,31 +160,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b56398c1a9dc3bf6",
+  "active": "c9024716a55c4bed",
   "lastOpenFiles": [
-    "Cloud/Azure/Deployment Checklist.md",
+    "Cloud/Azure/Azure Blob Storage.md",
+    "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
+    "Attachments/Pasted image 20240314160240.png",
+    "Attachments/Pasted image 20240314160139.png",
+    "Attachments/Pasted image 20240314155444.png",
+    "Attachments/Pasted image 20240314154540.png",
+    "Cloud/Azure/Load Test Web Server VM and Set Alert Rules.md",
     "Cloud/Azure/Deploying Test Application.md",
+    "Cloud/Azure/Azure Auto Scale VMs.md",
+    "Attachments/Pasted image 20240314145405.png",
+    "Attachments/Pasted image 20240314142152.png",
+    "Attachments/Pasted image 20240314091944.png",
+    "Attachments/Pasted image 20240314091538.png",
+    "Attachments/Pasted image 20240314091501.png",
+    "Cloud/Azure/Deployment Checklist.md",
     "Cloud/Two Tier Deployment.md",
     "Attachments/Pasted image 20240313151116.png",
-    "Attachments/Pasted image 20240313142157.png",
     "Cloud/Linux/sudo.md",
     "Cloud/Linux/Linux Environment Variables.md",
     "Cloud/Linux/Basic Linux Commands.md",
-    "Cloud/Azure/Blob Storage.md",
-    "Attachments/Pasted image 20240313125056.png",
-    "Attachments/Pasted image 20240313124948.png",
-    "Attachments/Pasted image 20240313122807.png",
-    "Attachments/Pasted image 20240313093229.png",
-    "Attachments/Pasted image 20240313091329.png",
     "Cloud/Azure/Azure Basics.md",
-    "Attachments/Pasted image 20240312105540.png",
     "Cloud/Azure/Azure VM Image Creation.md",
     "Cloud/Azure/Create a VM on Azure.md",
     "Markdown.md",
     "Git Commands.md",
     "Cloud/The Cloud.md",
-    "Attachments/Pasted image 20240311161058.png",
-    "Attachments/Pasted image 20240311161047.png",
     "Cloud/Azure/prov_nodejs.sh",
     "Cloud/Linux/Processes.md",
     "Cloud/Linux/Bash Scripts.md",
@@ -183,13 +198,9 @@
     "Cloud/Linux/Linux.md",
     "Python/Python Scripting.md",
     "Bash Script.md",
-    "Python/Libraries, Modules, Packages.md",
-    "Cloud/Linux/Linux Directory Structure.md",
-    "Cloud/SSH.md",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
     "Cloud/Linux",
     "Cloud/Azure",
-    "Cloud/Azure VM Basics.md",
     "Attachments/git-cheat-sheet.pdf",
     "Attachments/linux-commands-handbook.pdf",
     "Attachments",
