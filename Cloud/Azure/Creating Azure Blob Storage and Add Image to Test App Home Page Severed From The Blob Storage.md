@@ -68,8 +68,12 @@ rm GettyImages-499713000-1000x653.jpg
 # naviage into views to 
 cd views
 
-# make copy of index to revert back to later
-cp index.ejs index.ejs.backup
+# make copy of index to revert back to later, only if the backup doesnt exist
+if [ ! -f /index.ejs.backup ]; then
+    cp index.ejs index.ejs.backup
+fi
+
+
 
 # add line for img file, only if it doesnt already contain it (otherwise you end up with multiple cats if you rerun the script)
 if ! grep -q '<img src="https://tech257olivercatshop.blob.core.windows.net/catbox/cat.jpg"/>' index.ejs; then 
