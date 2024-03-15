@@ -38,6 +38,9 @@ Scale sets provide the following benefits
 
 ![[Pasted image 20240315153100.png]]
 
+## Load Balancers
+
+//TODO
 
 
 ## Building a Scale Set
@@ -126,6 +129,13 @@ In the case of this scale set pm2 does not start when the VM is rebooted, so you
 
 ![[Pasted image 20240315141719.png]]
 
+## Manage Instances
+
+![[Pasted image 20240315155943.png]]
+
+You can select instances and start, stop, restart, reimage or delete them manually, as well as set protection levels which will stop that VM from being included in the scale out/in.
+
+![[Pasted image 20240315160050.png]]
 ## SSH
 
 The SSH port 22 is NAT'd to port 50000+, where 50000 is the first instance, 50001 is the second, 50002, the third and so on. Use the ``-p`` parameter in ``ssh`` to specify the port number.
