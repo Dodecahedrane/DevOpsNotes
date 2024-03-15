@@ -40,7 +40,7 @@ Scale sets provide the following benefits
 
 ## Load Balancers
 
-//TODO
+A load balancer distributes inbound traffic between a number of VM instances. This distributes the load between these instances, allowing for 'scale out' of a service. (Rather than just using a larger and larger VM type). This also adds redundancy, which can be further increased by spreading these VMs across multiple zones.
 
 
 ## Building a Scale Set
@@ -176,8 +176,16 @@ You will have to first delete the scale set, then the NSG, public ip, and the lo
 The public IP must be deleted after the load balancer.
 
 
+## Spot Instances
+
+[Azure Spot Virtual Machines for Scale Sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/use-spot)
+
+You can use spot instances within Azure Scale Sets for cheaper pricing. This might mean instances are pulled, but you can (I think) set up rules to increase the number of instances of other types (either non spot or spot) if this happens.
 
 
+## Availability Sets
+
+Availability sets have a fixed number of VMs, but with the same redundancy and multi zone VMs as scale sets.
 
 
 
