@@ -33,3 +33,12 @@ Alerts cost money, so use them only when needed (and getting them regularly also
 You'll get an email looking like
 
 ![[Pasted image 20240314145405.png]]
+
+## Action Groups
+
+You can set up the alerts manually with an action group
+
+You have more options here on the types of alerts you can send (email, sms, webhook, etc)
+
+![[Pasted image 20240315100505.png]]
+![[Pasted image 20240315100517.png]]

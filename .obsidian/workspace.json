@@ -8,19 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c9024716a55c4bed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c4ee68b1e4b596d6",
             "type": "leaf",
             "state": {
@@ -45,8 +32,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c9024716a55c4bed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a2bf2731fb8e4c25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Azure/Azure Scale Sets.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -113,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
+                "file": "Cloud/Azure/Azure Scale Sets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
+                "file": "Cloud/Azure/Azure Scale Sets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md"
+                "file": "Cloud/Azure/Azure Scale Sets.md"
               }
             }
           }
@@ -174,25 +188,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c9024716a55c4bed",
+  "active": "a2bf2731fb8e4c25",
   "lastOpenFiles": [
-    "Cloud/Azure/Deploying Test Application.md",
-    "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
+    "Attachments/Pasted image 20240315153100.png",
+    "Attachments/Pasted image 20240315144207.png",
+    "Attachments/Pasted image 20240315144045.png",
+    "Attachments/Pasted image 20240315142938.png",
+    "Attachments/Pasted image 20240315141754.png",
+    "Attachments/Pasted image 20240315141719.png",
+    "Attachments/Pasted image 20240315141243.png",
+    "Attachments/Pasted image 20240315124334.png",
+    "Attachments/Pasted image 20240315124321.png",
+    "Attachments/Pasted image 20240315124310.png",
+    "Attachments/Pasted image 20240315124227.png",
     "Cloud/Azure/Azure Blob Storage.md",
-    "Attachments/Pasted image 20240314160240.png",
-    "Attachments/Pasted image 20240314160139.png",
-    "Attachments/Pasted image 20240314155444.png",
-    "Attachments/Pasted image 20240314154540.png",
+    "Cloud/Azure/Azure Scale Sets.md",
+    "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
+    "Cloud/Azure/Deploying Test Application.md",
     "Cloud/Azure/Load Test Web Server VM and Set Alert Rules.md",
-    "Cloud/Azure/Azure Auto Scale VMs.md",
-    "Attachments/Pasted image 20240314145405.png",
-    "Attachments/Pasted image 20240314142152.png",
-    "Attachments/Pasted image 20240314091944.png",
-    "Attachments/Pasted image 20240314091538.png",
-    "Attachments/Pasted image 20240314091501.png",
     "Cloud/Azure/Deployment Checklist.md",
     "Cloud/Two Tier Deployment.md",
-    "Attachments/Pasted image 20240313151116.png",
     "Cloud/Linux/sudo.md",
     "Cloud/Linux/Linux Environment Variables.md",
     "Cloud/Linux/Basic Linux Commands.md",
