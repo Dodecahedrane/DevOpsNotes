@@ -21,6 +21,19 @@
             }
           },
           {
+            "id": "c4ee68b1e4b596d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Azure/Deploying Test Application.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "a979af15514536de",
             "type": "leaf",
             "state": {
@@ -83,7 +96,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5bc1b361942c56ca",
@@ -162,14 +176,14 @@
   },
   "active": "c9024716a55c4bed",
   "lastOpenFiles": [
-    "Cloud/Azure/Azure Blob Storage.md",
+    "Cloud/Azure/Deploying Test Application.md",
     "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
+    "Cloud/Azure/Azure Blob Storage.md",
     "Attachments/Pasted image 20240314160240.png",
     "Attachments/Pasted image 20240314160139.png",
     "Attachments/Pasted image 20240314155444.png",
     "Attachments/Pasted image 20240314154540.png",
     "Cloud/Azure/Load Test Web Server VM and Set Alert Rules.md",
-    "Cloud/Azure/Deploying Test Application.md",
     "Cloud/Azure/Azure Auto Scale VMs.md",
     "Attachments/Pasted image 20240314145405.png",
     "Attachments/Pasted image 20240314142152.png",

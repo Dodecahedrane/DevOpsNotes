@@ -24,7 +24,9 @@ tags:
 
 ## Prerequisites
 
-Install Azure CLI and Login
+Need the NodeJS VM from [[Deploying Test Application]], database does not need to work.
+
+Install Azure CLI (on NodeJS VM) and Login
 
 ```bash
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
@@ -76,6 +78,7 @@ fi
 
 
 # add line for img file, only if it doesnt already contain it (otherwise you end up with multiple cats if you rerun the script)
+# grep -q is the pattern match flag, it will return true/false (hence why it works in the if statement)
 if ! grep -q '<img src="https://tech257olivercatshop.blob.core.windows.net/catbox/cat.jpg"/>' index.ejs; then 
 	sed -i '/<h2>/a\ <img src="https://tech257olivercatshop.blob.core.windows.net/catbox/cat.jpg"/>' index.ejs 
 else 
