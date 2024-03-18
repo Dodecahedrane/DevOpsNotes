@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c4ee68b1e4b596d6",
+            "id": "a979af15514536de",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md",
+                "file": "Cloud/Azure/Azure DMZ Architecture.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "a979af15514536de",
+            "id": "54461232958a4b56",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud/Azure/Azure Blob Storage.md",
+                "file": "Cloud/Azure/Deploying Test Application.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -59,8 +59,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,8 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5bc1b361942c56ca",
@@ -127,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/Azure/Azure Scale Sets.md",
+                "file": "Cloud/Azure/Azure DMZ Architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/Azure/Azure Scale Sets.md",
+                "file": "Cloud/Azure/Azure DMZ Architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud/Azure/Azure Scale Sets.md"
+                "file": "Cloud/Azure/Azure DMZ Architecture.md"
               }
             }
           }
@@ -188,23 +186,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a2bf2731fb8e4c25",
+  "active": "a979af15514536de",
   "lastOpenFiles": [
-    "Attachments/Pasted image 20240315160050.png",
-    "Attachments/Pasted image 20240315155943.png",
-    "Attachments/Pasted image 20240315153100.png",
-    "Attachments/Pasted image 20240315144207.png",
-    "Attachments/Pasted image 20240315144045.png",
-    "Attachments/Pasted image 20240315142938.png",
-    "Attachments/Pasted image 20240315141754.png",
-    "Attachments/Pasted image 20240315141719.png",
-    "Attachments/Pasted image 20240315141243.png",
-    "Attachments/Pasted image 20240315124334.png",
-    "Attachments/Pasted image 20240315124321.png",
+    "Attachments/Pasted image 20240318163606.png",
+    "Attachments/Pasted image 20240318160815.png",
+    "Cloud/Azure/Deploying Test Application.md",
+    "Cloud/Azure/Azure DMZ Architecture.md",
+    "Attachments/Pasted image 20240318121401.png",
+    "Attachments/Pasted image 20240318120948.png",
+    "Attachments/Pasted image 20240318120838.png",
+    "Attachments/Pasted image 20240318120348.png",
+    "Attachments/Pasted image 20240318115948.png",
+    "Attachments/Pasted image 20240318115618.png",
+    "Attachments/Pasted image 20240318115404.png",
+    "Attachments/Pasted image 20240318105320.png",
+    "Attachments/Pasted image 20240318105311.png",
     "Cloud/Azure/Azure Blob Storage.md",
     "Cloud/Azure/Azure Scale Sets.md",
     "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
-    "Cloud/Azure/Deploying Test Application.md",
     "Cloud/Azure/Load Test Web Server VM and Set Alert Rules.md",
     "Cloud/Azure/Deployment Checklist.md",
     "Cloud/Two Tier Deployment.md",
@@ -226,7 +225,6 @@
     "Cloud/Linux/Group.md",
     "Cloud/Linux/Linux.md",
     "Python/Python Scripting.md",
-    "Bash Script.md",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
     "Cloud/Linux",
     "Cloud/Azure",

@@ -175,13 +175,11 @@ You will have to first delete the scale set, then the NSG, public ip, and the lo
 
 The public IP must be deleted after the load balancer.
 
-
 ## Spot Instances
 
 [Azure Spot Virtual Machines for Scale Sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/use-spot)
 
 You can use spot instances within Azure Scale Sets for cheaper pricing. This might mean instances are pulled, but you can (I think) set up rules to increase the number of instances of other types (either non spot or spot) if this happens.
-
 
 ## Availability Sets
 
