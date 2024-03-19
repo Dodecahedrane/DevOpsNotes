@@ -8,7 +8,7 @@ tags:
 ---
 ## Prerequisites
 
-Create a image of the NodeJS VM from [[Deploying Test Application]] 
+Create a image of the NodeJS VM from [[Deploying Test Application in Azure]] 
 
 [Link To Image](https://portal.azure.com/#@spartaglobal.com/resource/subscriptions/cd36dfff-6e85-4164-b64e-b4078a773259/resourcegroups/tech257/providers/Microsoft.Compute/images/tech257-oliver-web-vm-image-20240314143508/overview)
 
@@ -153,7 +153,7 @@ ssh -i .\tech257-oliver-linux-vm-key.pem adminuser@4.159.34.29 -p 50001
 You can tell what you need to add to 50000 to get by looking at the numbers on the VM name, in this case 000001, 000002. It will normally start from 000000. Add this to 50000 to get the correct port number.
 ## Break an Instance
 
-For the [[Deploying Test Application]] app you can do this by just restarting an instance.
+For the [[Deploying Test Application in Azure]] app you can do this by just restarting an instance.
 
 You should get an unhealthy status.
 

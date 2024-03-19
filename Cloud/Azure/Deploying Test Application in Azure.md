@@ -107,6 +107,9 @@ sudo apt-get update
 # update
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
+# install git
+sudo DEBIAN_FRONTEND=noninteractive apt-get install git -y
+
 # git clone
 git clone https://github.com/Dodecahedrane/test-app
 

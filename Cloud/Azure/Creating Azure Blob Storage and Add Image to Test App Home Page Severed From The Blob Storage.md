@@ -24,7 +24,7 @@ tags:
 
 ## Prerequisites
 
-Need the NodeJS VM from [[Deploying Test Application]], database does not need to work.
+Need the NodeJS VM from [[Deploying Test Application in Azure]], database does not need to work.
 
 Install Azure CLI (on NodeJS VM) and Login
 

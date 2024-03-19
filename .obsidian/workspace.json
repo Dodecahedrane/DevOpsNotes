@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud/Azure/Azure DMZ Architecture.md",
+                "file": "Cloud/AWS/Deploying Test Application In AWS.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,38 +21,12 @@
             }
           },
           {
-            "id": "54461232958a4b56",
+            "id": "edd0d5ee63af2574",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c9024716a55c4bed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a2bf2731fb8e4c25",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Azure/Azure Scale Sets.md",
+                "file": "Cloud/Azure/Deploying Test Application in Azure.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -125,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/Azure/Azure DMZ Architecture.md",
+                "file": "Cloud/AWS/Deploying Test Application In AWS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/Azure/Azure DMZ Architecture.md",
+                "file": "Cloud/AWS/Deploying Test Application In AWS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud/Azure/Azure DMZ Architecture.md"
+                "file": "Cloud/AWS/Deploying Test Application In AWS.md"
               }
             }
           }
@@ -188,19 +162,21 @@
   },
   "active": "a979af15514536de",
   "lastOpenFiles": [
-    "Attachments/Pasted image 20240318163606.png",
-    "Attachments/Pasted image 20240318160815.png",
-    "Cloud/Azure/Deploying Test Application.md",
+    "Cloud/Azure/Deploying Test Application in Azure.md",
+    "Cloud/AWS/Deploying Test Application In AWS.md",
+    "Attachments/Pasted image 20240319121221.png",
+    "Attachments/Pasted image 20240319121137.png",
+    "Attachments/Pasted image 20240319121119.png",
+    "Attachments/Pasted image 20240319120906.png",
+    "Attachments/Pasted image 20240319120849.png",
+    "Attachments/Pasted image 20240319120831.png",
+    "Attachments/Pasted image 20240319120813.png",
+    "Attachments/Pasted image 20240319120748.png",
+    "Attachments/Pasted image 20240319113655.png",
     "Cloud/Azure/Azure DMZ Architecture.md",
-    "Attachments/Pasted image 20240318121401.png",
-    "Attachments/Pasted image 20240318120948.png",
-    "Attachments/Pasted image 20240318120838.png",
-    "Attachments/Pasted image 20240318120348.png",
-    "Attachments/Pasted image 20240318115948.png",
-    "Attachments/Pasted image 20240318115618.png",
-    "Attachments/Pasted image 20240318115404.png",
-    "Attachments/Pasted image 20240318105320.png",
-    "Attachments/Pasted image 20240318105311.png",
+    "Cloud/AWS",
+    "Cloud/Untitled.md",
+    "Attachments/Pasted image 20240318163606.png",
     "Cloud/Azure/Azure Blob Storage.md",
     "Cloud/Azure/Azure Scale Sets.md",
     "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
@@ -223,8 +199,6 @@
     "Cloud/Azure/Azure Virtual Networks and Subnets.md",
     "Cloud/Linux/File Ownership and Permissions.md",
     "Cloud/Linux/Group.md",
-    "Cloud/Linux/Linux.md",
-    "Python/Python Scripting.md",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
     "Cloud/Linux",
     "Cloud/Azure",

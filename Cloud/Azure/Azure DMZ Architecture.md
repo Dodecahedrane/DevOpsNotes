@@ -5,7 +5,7 @@ tags:
   - DevOps
   - Networking
 ---
-Network Security Groups, explained in [[Deploying Test Application]], can not only be assigned to NICs, but can also be assigned to a subnet.
+Network Security Groups, explained in [[Deploying Test Application in Azure]], can not only be assigned to NICs, but can also be assigned to a subnet.
 
 [Azure Tutorial](https://learn.microsoft.com/en-us/azure/virtual-network/tutorial-create-route-table-portal)
 ## DMZ Architecture Diagram 
