@@ -1,3 +1,10 @@
+---
+tags:
+  - AWS
+  - Cloud
+  - DevOps
+---
+
 This is the same app as from [[Deploying Test Application in Azure]]
 
 
@@ -6,10 +13,11 @@ This is the same app as from [[Deploying Test Application in Azure]]
 Name your instance
 ![[Pasted image 20240319120748.png]]
 
-Choose Ubuntu 22.04lts, x86
+Choose Ubuntu 22.04lts
+x86
 ![[Pasted image 20240319120813.png]]
 
-The instance type should be t2.micro
+The instance type should be t2.micro, this is probably the default
 ![[Pasted image 20240319120831.png]]
 
 Choose the correct SSH key
@@ -54,6 +62,8 @@ This will stop the dialog coming up asking to restart services after an ``apt up
 ## Web App Install Script
 
 Use the same script as [[Deploying Test Application in Azure]]
+
+This works as user data.
 
 ```bash
 #!/bin/bash
@@ -113,6 +123,9 @@ export DB_HOST=mongodb://10.0.3.4:27017/posts
 sudo -E npm install
 sudo npm install express
 
+# this wasnt needed on azure but is on aws??????
+sudo node seeds/seed.js 
+
 # stop existing pm2 app process if it is already running
 # this will error if it isnt running, but it doesnt cause an issue 
 # and allows for the rerunning of the script if required
@@ -120,4 +133,64 @@ pm2 stop app
 
 # start the app with pm2 (in the background)
 pm2 start app.js
+```
+
+## User data in AWS
+
+Works the same as in Azure, in the Advanced section when you are creating a VM.
+
+## Database Deployment
+
+The VM is the same as the web server VM.
+
+Same script as in [[Deploying Test Application in Azure]] but with the extra line as used in the web server script, this works as user data.
+
+```bash
+#!/bin/bash
+
+sudo sed -i "s/#\$nrconf{restart} = 'i';/\$nrconf{restart} = 'a';/g" /etc/needrestart/needrestart.conf    
+
+# upgrade
+sudo apt-get update
+
+# update
+sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
+
+# install mongodb version 7.0.5
+# following this guide:
+# https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu
+
+# curl and gnupg required to install mongodb
+sudo DEBIAN_FRONTEND=noninteractive apt-get install gnupg curl -y
+
+# add mongodb GPG key to validate download of mongodb
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+   --dearmor
+
+# Create the `/etc/apt/sources.list.d/mongodb-org-7.0.list` file for Ubuntu 22.04
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+
+# update to add mongodb packages
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+
+# install correct version of mongodb, note different version of mongosh (as the office docs are wrong :( )
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=2.1.5 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6
+
+
+# this fixes the mongodb versions so if you apt upgrade, they are skipped
+echo "mongodb-org hold" | sudo dpkg --set-selections
+echo "mongodb-org-database hold" | sudo dpkg --set-selections
+echo "mongodb-org-server hold" | sudo dpkg --set-selections
+echo "mongodb-mongosh hold" | sudo dpkg --set-selections
+echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+
+sudo systemctl daemon-reload
+sudo systemctl enable mongod
+sudo systemctl start mongod
+
+sudo sed -i "s@127.0.0.1@0.0.0.0@" /etc/mongod.conf
+
+sudo systemctl restart mongod
 ```
