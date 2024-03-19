@@ -49,7 +49,7 @@ Uncomment and modify this line
 
 The ``a`` will need to changing from the ``i`` 
 
-This will stop the dialog coming up asking to restart services after an ``apt upgrade``
+This will stop the dialog coming up asking to restart services after an ``apt upgrade``. This is the first command of the script.
 
 ## Web App Install Script
 
@@ -57,6 +57,9 @@ Use the same script as [[Deploying Test Application in Azure]]
 
 ```bash
 #!/bin/bash
+
+#extra line to disable reboot dialog
+sudo sed -i "s/#\$nrconf{restart} = 'i';/\$nrconf{restart} = 'a';/g" /etc/needrestart/needrestart.conf    
 
 mkdir repo
 
