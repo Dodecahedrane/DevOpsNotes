@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "564e15aa2819e7cd",
+            "id": "09e498f69eb2eacf",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,8 +19,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "564e15aa2819e7cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CI CD Pipelines/Jenkins.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CI CD Pipelines/CI CD Overview.md",
+                "file": "CI CD Pipelines/Jenkins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CI CD Pipelines/CI CD Overview.md",
+                "file": "CI CD Pipelines/Jenkins.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CI CD Pipelines/CI CD Overview.md"
+                "file": "CI CD Pipelines/Jenkins.md"
               }
             }
           }
@@ -149,6 +163,8 @@
   },
   "active": "564e15aa2819e7cd",
   "lastOpenFiles": [
+    "CI CD Pipelines/CI CD Overview.md",
+    "CI CD Pipelines/Jenkins.md",
     "Attachments/Pasted image 20240320133227.png",
     "Attachments/Pasted image 20240320133204.png",
     "Attachments/Pasted image 20240320133136.png",
@@ -159,8 +175,6 @@
     "Attachments/Pasted image 20240320120408.png",
     "Attachments/Pasted image 20240320120205.png",
     "Attachments/Pasted image 20240320120153.png",
-    "Attachments/Pasted image 20240320120130.png",
-    "CI CD Pipelines/CI CD Overview.md",
     "CI CD Pipelines",
     "Cloud/Azure/Deploying Test Application in Azure.md",
     "Cloud/AWS/Deploying Test Application In AWS.md",
