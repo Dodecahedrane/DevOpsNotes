@@ -32,6 +32,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "22043dea56114201",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/AWS/Deploying Test Application In AWS.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -163,21 +176,22 @@
   },
   "active": "564e15aa2819e7cd",
   "lastOpenFiles": [
-    "CI CD Pipelines/CI CD Overview.md",
+    "Attachments/Pasted image 20240320162823.png",
+    "Attachments/Pasted image 20240320155533.png",
+    "Attachments/Pasted image 20240320155158.png",
+    "Attachments/Pasted image 20240320155123.png",
+    "Cloud/AWS/Deploying Test Application In AWS.md",
     "CI CD Pipelines/Jenkins.md",
+    "Attachments/Pasted image 20240320141359.png",
+    "Attachments/Pasted image 20240320141119.png",
+    "Attachments/Pasted image 20240320140838.png",
+    "CI CD Pipelines/CI CD Overview.md",
     "Attachments/Pasted image 20240320133227.png",
     "Attachments/Pasted image 20240320133204.png",
     "Attachments/Pasted image 20240320133136.png",
     "Attachments/Pasted image 20240320133016.png",
-    "Attachments/Pasted image 20240320132957.png",
-    "Attachments/Pasted image 20240320132941.png",
-    "Attachments/Pasted image 20240320120450.png",
-    "Attachments/Pasted image 20240320120408.png",
-    "Attachments/Pasted image 20240320120205.png",
-    "Attachments/Pasted image 20240320120153.png",
     "CI CD Pipelines",
     "Cloud/Azure/Deploying Test Application in Azure.md",
-    "Cloud/AWS/Deploying Test Application In AWS.md",
     "Cloud/Azure/Azure DMZ Architecture.md",
     "Cloud/AWS",
     "Cloud/Untitled.md",
@@ -201,7 +215,6 @@
     "Cloud/Linux/Bash Scripts.md",
     "Cloud/Azure/Azure SSH.md",
     "Cloud/Azure/Azure Virtual Networks and Subnets.md",
-    "Cloud/Linux/File Ownership and Permissions.md",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
     "Cloud/Linux",
     "Cloud/Azure",
