@@ -4,29 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "27e90e8ad5d56498",
+        "id": "e43e82470a1bebcd",
         "type": "tabs",
         "children": [
           {
-            "id": "a979af15514536de",
+            "id": "564e15aa2819e7cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud/AWS/Deploying Test Application In AWS.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "edd0d5ee63af2574",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Azure/Deploying Test Application in Azure.md",
+                "file": "CI CD Pipelines/CI CD Overview.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud/AWS/Deploying Test Application In AWS.md",
+                "file": "CI CD Pipelines/CI CD Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud/AWS/Deploying Test Application In AWS.md",
+                "file": "CI CD Pipelines/CI CD Overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud/AWS/Deploying Test Application In AWS.md"
+                "file": "CI CD Pipelines/CI CD Overview.md"
               }
             }
           }
@@ -160,23 +147,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a979af15514536de",
+  "active": "564e15aa2819e7cd",
   "lastOpenFiles": [
+    "Attachments/Pasted image 20240320133227.png",
+    "Attachments/Pasted image 20240320133204.png",
+    "Attachments/Pasted image 20240320133136.png",
+    "Attachments/Pasted image 20240320133016.png",
+    "Attachments/Pasted image 20240320132957.png",
+    "Attachments/Pasted image 20240320132941.png",
+    "Attachments/Pasted image 20240320120450.png",
+    "Attachments/Pasted image 20240320120408.png",
+    "Attachments/Pasted image 20240320120205.png",
+    "Attachments/Pasted image 20240320120153.png",
+    "Attachments/Pasted image 20240320120130.png",
+    "CI CD Pipelines/CI CD Overview.md",
+    "CI CD Pipelines",
     "Cloud/Azure/Deploying Test Application in Azure.md",
     "Cloud/AWS/Deploying Test Application In AWS.md",
-    "Attachments/Pasted image 20240319121221.png",
-    "Attachments/Pasted image 20240319121137.png",
-    "Attachments/Pasted image 20240319121119.png",
-    "Attachments/Pasted image 20240319120906.png",
-    "Attachments/Pasted image 20240319120849.png",
-    "Attachments/Pasted image 20240319120831.png",
-    "Attachments/Pasted image 20240319120813.png",
-    "Attachments/Pasted image 20240319120748.png",
-    "Attachments/Pasted image 20240319113655.png",
     "Cloud/Azure/Azure DMZ Architecture.md",
     "Cloud/AWS",
     "Cloud/Untitled.md",
-    "Attachments/Pasted image 20240318163606.png",
     "Cloud/Azure/Azure Blob Storage.md",
     "Cloud/Azure/Azure Scale Sets.md",
     "Cloud/Azure/Creating Azure Blob Storage and Add Image to Test App Home Page Severed From The Blob Storage.md",
@@ -198,7 +188,6 @@
     "Cloud/Azure/Azure SSH.md",
     "Cloud/Azure/Azure Virtual Networks and Subnets.md",
     "Cloud/Linux/File Ownership and Permissions.md",
-    "Cloud/Linux/Group.md",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
     "Cloud/Linux",
     "Cloud/Azure",
