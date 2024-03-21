@@ -1,13 +1,7 @@
 
 ## Jenkins Workflow
 
-![[Pasted image 20240320162823.png]]
-
-//TODO Update this once Jenkins to Cloud part is completed
-
-
-
-
+![[Pasted image 20240321133508.png]]
 
 ## How to set up a job
 
@@ -62,7 +56,7 @@ Set up with SSH access to git repo as above, with the bellow settings and shell 
 Set build to run on this node
 ![[Pasted image 20240320141359.png]]
 
-![[Pasted image 20240320141119.png]]
+![[Pasted image 20240321153639.png]]
 
 
 
@@ -83,3 +77,54 @@ You can choose to send just push requests, everything or select some events (PR,
 You can see what caused a Jenkins job on the web UI
 
 ![[Pasted image 20240320155533.png]]
+
+
+## Run tests from dev branch commit, then merge them into main automatically
+
+You could set the merge to happen in the test job, but this runs on the agent node, rather than the main node. The agent node has a lot more compute, as well as dependencies, for running builds and tests. So we set up this second job to do the merge, which happens on the master node, tying up less of the resources on the agent node that is used for builds and testing.
+
+Specify the new dev branch in the Jenkins Test Job
+
+![[Pasted image 20240321101614.png]]
+
+Set up second job for merge to run if the build is successful
+
+![[Pasted image 20240321102903.png]]
+
+Set up the Post Build Git Publisher actions
+
+![[Pasted image 20240321111401.png]]
+
+## Push the code to AWS
+
+Set up a new job with access to GitHub via ssh same as above
+
+Set it to run after the merge job
+
+Select SSH Agent in the Build Environment section, select the correct SSH key to connect to the AWS EC2 Instance
+
+![[Pasted image 20240321114730.png]]
+
+Execute Shell
+
+![[Pasted image 20240321121710.png]]
+
+Actual bash script
+
+```bash
+# transfer app folder
+rsync -avz -e "ssh -o StrictHostKeyChecking=no" app ubuntu@34.244.77.138:~/
+
+ssh -o "StrictHostKeyChecking=no" ubuntu@34.244.77.138 <<EOF
+	sudo apt-get update -y
+    sudo apt-get upgrade -y
+    sudo apt-get install nginx -y
+    sudo systemctl restart nginx
+    
+    cd app/app
+    sudo chmod 700 ../environment/app/provision.sh
+    sudo ../environment/app/provision.sh
+    pm2 stop app.js
+    pm2 start app.js
+```
+

@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "09e498f69eb2eacf",
+            "id": "564e15aa2819e7cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CI CD Pipelines/CI CD Overview.md",
+                "file": "CI CD Pipelines/Jenkins.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,25 @@
             }
           },
           {
-            "id": "564e15aa2819e7cd",
+            "id": "e6ee09f19da88de0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CI CD Pipelines/Jenkins.md",
+                "file": "Cloud/Azure/Deploying Test Application in Azure.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b2bfad777014c085",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Linux/Basic Linux Commands.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -46,8 +59,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -176,22 +188,23 @@
   },
   "active": "564e15aa2819e7cd",
   "lastOpenFiles": [
+    "Attachments/Pasted image 20240321153639.png",
+    "Cloud/Azure/Deploying Test Application in Azure.md",
+    "CI CD Pipelines/Jenkins.md",
+    "Cloud/Linux/Basic Linux Commands.md",
+    "CI CD Pipelines/CI CD Overview.md",
+    "Attachments/Pasted image 20240321133508.png",
+    "Attachments/Pasted image 20240321121710.png",
+    "Attachments/Pasted image 20240321114730.png",
+    "Attachments/Pasted image 20240321111401.png",
+    "Attachments/Pasted image 20240321102903.png",
+    "Attachments/Pasted image 20240321101614.png",
     "Attachments/Pasted image 20240320162823.png",
     "Attachments/Pasted image 20240320155533.png",
     "Attachments/Pasted image 20240320155158.png",
     "Attachments/Pasted image 20240320155123.png",
     "Cloud/AWS/Deploying Test Application In AWS.md",
-    "CI CD Pipelines/Jenkins.md",
-    "Attachments/Pasted image 20240320141359.png",
-    "Attachments/Pasted image 20240320141119.png",
-    "Attachments/Pasted image 20240320140838.png",
-    "CI CD Pipelines/CI CD Overview.md",
-    "Attachments/Pasted image 20240320133227.png",
-    "Attachments/Pasted image 20240320133204.png",
-    "Attachments/Pasted image 20240320133136.png",
-    "Attachments/Pasted image 20240320133016.png",
     "CI CD Pipelines",
-    "Cloud/Azure/Deploying Test Application in Azure.md",
     "Cloud/Azure/Azure DMZ Architecture.md",
     "Cloud/AWS",
     "Cloud/Untitled.md",
@@ -203,7 +216,6 @@
     "Cloud/Two Tier Deployment.md",
     "Cloud/Linux/sudo.md",
     "Cloud/Linux/Linux Environment Variables.md",
-    "Cloud/Linux/Basic Linux Commands.md",
     "Cloud/Azure/Azure Basics.md",
     "Cloud/Azure/Azure VM Image Creation.md",
     "Cloud/Azure/Create a VM on Azure.md",
