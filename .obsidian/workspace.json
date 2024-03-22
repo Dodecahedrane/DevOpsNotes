@@ -13,6 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "CI CD Pipelines/Install Jenkins on AWS.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a987d6015a0bdf69",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "CI CD Pipelines/Jenkins.md",
                 "mode": "source",
                 "backlinks": true,
@@ -125,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CI CD Pipelines/Jenkins.md",
+                "file": "CI CD Pipelines/Install Jenkins on AWS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CI CD Pipelines/Jenkins.md",
+                "file": "CI CD Pipelines/Install Jenkins on AWS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CI CD Pipelines/Jenkins.md"
+                "file": "CI CD Pipelines/Install Jenkins on AWS.md"
               }
             }
           }
@@ -188,21 +201,21 @@
   },
   "active": "564e15aa2819e7cd",
   "lastOpenFiles": [
-    "Attachments/Pasted image 20240321153639.png",
-    "Cloud/Azure/Deploying Test Application in Azure.md",
     "CI CD Pipelines/Jenkins.md",
+    "Cloud/Azure/Deploying Test Application in Azure.md",
+    "CI CD Pipelines/Install Jenkins on AWS.md",
+    "Attachments/Pasted image 20240322145153.png",
+    "Attachments/Pasted image 20240322144437.png",
+    "Attachments/Pasted image 20240322144328.png",
+    "Attachments/Pasted image 20240322143822.png",
+    "Attachments/Pasted image 20240322103948.png",
+    "Attachments/Pasted image 20240321153639.png",
     "Cloud/Linux/Basic Linux Commands.md",
     "CI CD Pipelines/CI CD Overview.md",
     "Attachments/Pasted image 20240321133508.png",
     "Attachments/Pasted image 20240321121710.png",
     "Attachments/Pasted image 20240321114730.png",
     "Attachments/Pasted image 20240321111401.png",
-    "Attachments/Pasted image 20240321102903.png",
-    "Attachments/Pasted image 20240321101614.png",
-    "Attachments/Pasted image 20240320162823.png",
-    "Attachments/Pasted image 20240320155533.png",
-    "Attachments/Pasted image 20240320155158.png",
-    "Attachments/Pasted image 20240320155123.png",
     "Cloud/AWS/Deploying Test Application In AWS.md",
     "CI CD Pipelines",
     "Cloud/Azure/Azure DMZ Architecture.md",
@@ -226,7 +239,6 @@
     "Cloud/Linux/Processes.md",
     "Cloud/Linux/Bash Scripts.md",
     "Cloud/Azure/Azure SSH.md",
-    "Cloud/Azure/Azure Virtual Networks and Subnets.md",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
     "Cloud/Linux",
     "Cloud/Azure",
