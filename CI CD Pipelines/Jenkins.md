@@ -121,15 +121,15 @@ Actual bash script
 rsync -avz -e "ssh -o StrictHostKeyChecking=no" app ubuntu@34.244.77.138:~/
 
 ssh -o "StrictHostKeyChecking=no" ubuntu@34.244.77.138 <<EOF
-	sudo apt-get update -y
-    sudo apt-get upgrade -y
-    sudo apt-get install nginx -y
-    sudo systemctl restart nginx
+	#sudo apt-get update -y
+    #sudo apt-get upgrade -y
+    #sudo apt-get install nginx -y
+    #sudo systemctl restart nginx
 
 	# you can comment out the prov script once it has ran once, so long as it does not need to be run again (eg, for a version change)
     cd app/app
-    sudo chmod 700 ../environment/app/provision.sh
-    sudo ../environment/app/provision.sh
+    #sudo chmod 700 ../environment/app/provision.sh
+    #sudo ../environment/app/provision.sh
     pm2 stop app.js
     pm2 start app.js
 ```

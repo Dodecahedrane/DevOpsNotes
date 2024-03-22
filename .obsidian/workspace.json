@@ -72,7 +72,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -138,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CI CD Pipelines/Install Jenkins on AWS.md",
+                "file": "CI CD Pipelines/Jenkins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CI CD Pipelines/Install Jenkins on AWS.md",
+                "file": "CI CD Pipelines/Jenkins.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CI CD Pipelines/Install Jenkins on AWS.md"
+                "file": "CI CD Pipelines/Jenkins.md"
               }
             }
           }
@@ -199,11 +200,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "564e15aa2819e7cd",
+  "active": "a987d6015a0bdf69",
   "lastOpenFiles": [
+    "CI CD Pipelines/Install Jenkins on AWS.md",
     "CI CD Pipelines/Jenkins.md",
     "Cloud/Azure/Deploying Test Application in Azure.md",
-    "CI CD Pipelines/Install Jenkins on AWS.md",
     "Attachments/Pasted image 20240322145153.png",
     "Attachments/Pasted image 20240322144437.png",
     "Attachments/Pasted image 20240322144328.png",
