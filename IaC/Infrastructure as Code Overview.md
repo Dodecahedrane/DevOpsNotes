@@ -25,7 +25,7 @@ IaC should be used where a one configuration might be reused to reran multiple t
 
 ## IaC Tools
 
-Ansible, terraform, puppet, 
+Ansible, terraform, puppet, chef
 
 ## What is Ansible?
 
