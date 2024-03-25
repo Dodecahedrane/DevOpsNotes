@@ -53,3 +53,31 @@ ansible web -m ansible.builtin.copy -a "src=~/.ssh/tech257.pem dest=.ssh/"
 
 ansible [group-name/remote] -m ansible.builtin.copy -a "src=[source-file] dest= [destination-path]"
 ```
+
+## Playbooks
+
+Playbooks define a configuration
+
+```yaml
+# starts with ---
+---
+
+# where do you want to install or run this playbook
+# group name, all, single hostname
+- hosts: web
+
+
+# see logs
+  gather_facts: yes
+
+
+# provide admin access to this playbook
+  become: true
+
+
+# install nginx
+  tasks:
+  - name: Install and Configure Ngnix on the web nodes
+    apt: pkg=nginx state=present
+```
+

@@ -8,19 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "564e15aa2819e7cd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CI CD Pipelines/Install Jenkins on AWS.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "a987d6015a0bdf69",
             "type": "leaf",
             "state": {
@@ -34,38 +21,12 @@
             }
           },
           {
-            "id": "e6ee09f19da88de0",
+            "id": "6e1d3944d06b573a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud/Azure/Deploying Test Application in Azure.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b2bfad777014c085",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Linux/Basic Linux Commands.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "22043dea56114201",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/AWS/Deploying Test Application In AWS.md",
+                "file": "IaC/Ansible/Get the Test Application Running With Ansible.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -139,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IaC/Ansible/Ansible Basics.md",
+                "file": "IaC/Ansible/Get the Test Application Running With Ansible.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IaC/Ansible/Ansible Basics.md",
+                "file": "IaC/Ansible/Get the Test Application Running With Ansible.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IaC/Ansible/Ansible Basics.md"
+                "file": "IaC/Ansible/Get the Test Application Running With Ansible.md"
               }
             }
           }
@@ -200,15 +161,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a987d6015a0bdf69",
+  "active": "6e1d3944d06b573a",
   "lastOpenFiles": [
-    "IaC/Infrastructure as Code Overview.md",
+    "Cloud/Azure/Deploying Test Application in Azure.md",
+    "IaC/Ansible/Get the Test Application Running With Ansible.md",
     "IaC/Ansible/Ansible Basics.md",
+    "CI CD Pipelines/Install Jenkins on AWS.md",
+    "IaC/Infrastructure as Code Overview.md",
     "IaC/Ansible",
     "CI CD Pipelines/Jenkins.md",
     "IaC",
-    "CI CD Pipelines/Install Jenkins on AWS.md",
-    "Cloud/Azure/Deploying Test Application in Azure.md",
     "Attachments/Pasted image 20240322145153.png",
     "Attachments/Pasted image 20240322144437.png",
     "Attachments/Pasted image 20240322144328.png",
@@ -242,7 +204,6 @@
     "Cloud/The Cloud.md",
     "Cloud/Azure/prov_nodejs.sh",
     "Cloud/Linux/Processes.md",
-    "Cloud/Linux/Bash Scripts.md",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
     "Cloud/Linux",
     "Cloud/Azure",

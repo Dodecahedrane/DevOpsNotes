@@ -1,0 +1,86 @@
+---
+tags:
+  - Ansible
+  - DevOps
+  - IaC
+  - InfrastructureasCode
+---
+## Ansible Playbook
+
+```yaml
+---
+
+- hosts: web
+  gather_facts: yes
+  become: true
+  tasks:
+  - name: Clone the github repo test-app
+    git:
+      repo: https://github.com/Dodecahedrane/test-app.git
+      dest: /home/ubuntu/repo/
+      clone: yes
+      update: yes
+
+  - name: Install and Configure Ngnix on the web nodes
+    apt:
+      pkg=nginx
+      state=present
+
+  - name: "Add nodejs apt key"
+    apt_key:
+      url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+      state: present
+
+  - name: "Add nodejs 17.x ppa for apt repo"
+    apt_repository:
+      repo: deb https://deb.nodesource.com/node_17.x bionic main
+      update_cache: yes
+
+  - name: Install nodejs
+    apt:
+      name: nodejs
+      state: present
+
+  - name: Install npm packages
+    npm:
+      path: /home/ubuntu/repo/app/app/
+      state: present
+
+  - name: Install express
+    npm:
+      name: express
+      global: yes
+
+  - name: Install mongoose
+    npm:
+      name: mongoose
+      global: yes
+
+  - name: Install ejs
+    npm:
+      name: ejs
+      global: yes
+
+  - name: Install PM2
+    npm:
+      name: pm2
+      global: yes
+
+  - name: Run pm2 stop all
+    command: pm2 stop all
+    ignore_errors: true
+    become: yes
+
+  - name: Run pm2 start
+    command: chdir=/home/ubuntu/repo/app/app pm2 start app.js -f
+    become_user: ubuntu
+
+  - name: nginx copy new config
+    command: sed -i "s@try_files \$uri \$uri/ =404;@proxy_pass http://127.0.0.1:3000;@" /etc/nginx/sites-available/default
+    become: true
+
+  - name: nginx
+    command: sudo service nginx restart && sudo service nginx enable
+    become_user: ubuntu
+```
+
