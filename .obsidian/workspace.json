@@ -200,8 +200,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a987d6015a0bdf69",
+  "active": "b56398c1a9dc3bf6",
   "lastOpenFiles": [
+    "IaC/Ansible",
     "CI CD Pipelines/Jenkins.md",
     "IaC/Infrastructure as Code Overview.md",
     "IaC",
@@ -241,7 +242,6 @@
     "Cloud/Azure/prov_nodejs.sh",
     "Cloud/Linux/Processes.md",
     "Cloud/Linux/Bash Scripts.md",
-    "Cloud/Azure/Azure SSH.md",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
     "Cloud/Linux",
     "Cloud/Azure",
