@@ -29,6 +29,9 @@ Ansible, terraform, puppet,
 
 ## What is Ansible?
 
-Ansible is used to manage the configuration of multiple machines at once, you can define a spec (things to install, files to modify) within a YAML (?) file with shell like (?) commands. You can then run this spec across a "inventory" of machines, ansible will SSH into these (?) and deploy the spec to each machine, making sure that they all have the same configuration.
+Ansible is used to manage the configuration of multiple machines at once, you can define a spec (things to install, files to modify) within a YAML (?) file called a Playbook where you can define your machine spec. You can then run this Playbook across an "Inventory" of machines, ansible will SSH into these (?) and deploy the spec to each machine, making sure that they all have the same configuration.
 
 ## Who uses IaC and Ansible?
+
+Ansible is built by Red Hat
+
