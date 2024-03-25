@@ -14,7 +14,7 @@ This playbook
 - [x] Installs NodeJS
 - [x] Installs the relevant NPM packages (including PM2)
 - [x] Runs the app in PM2
-- [x] Updates the Nginx config file
+- [x] Update the Nginx config file
 - [x] Reloads Nginx
 
 ```yaml
