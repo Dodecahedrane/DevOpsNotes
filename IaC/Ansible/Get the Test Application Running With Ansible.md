@@ -86,12 +86,18 @@ This playbook
     command: chdir=/home/ubuntu/repo/app/app pm2 start app.js -f
     become_user: ubuntu
 
-  - name: nginx copy new config
-    command: sed -i "s@try_files \$uri \$uri/ =404;@proxy_pass http://127.0.0.1:3000;@" /etc/nginx/sites-available/default
-    become: true
+  - name: nginx copy new config using lineinfile
+    ansible.builtin.lineinfile:
+      path: /etc/nginx/sites-available/default
+      regexp: '^try_files \$uri \$uri/ =404;'
+      line: 'proxy_pass http://127.0.0.1:3000;'
+      backrefs: yes
 
   - name: nginx
-    command: sudo service nginx restart && sudo service nginx enable
-    become_user: ubuntu
+    ansible.builtin.service:
+      name: nginx
+      state: restarted
+      enabled: yes
+    become: yes
 ```
 
