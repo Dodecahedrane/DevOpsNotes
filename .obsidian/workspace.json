@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CI CD Pipelines/Jenkins.md",
+                "file": "IaC/Infrastructure as Code Overview.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CI CD Pipelines/Jenkins.md",
+                "file": "IaC/Infrastructure as Code Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CI CD Pipelines/Jenkins.md",
+                "file": "IaC/Infrastructure as Code Overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CI CD Pipelines/Jenkins.md"
+                "file": "IaC/Infrastructure as Code Overview.md"
               }
             }
           }
@@ -202,8 +202,10 @@
   },
   "active": "a987d6015a0bdf69",
   "lastOpenFiles": [
-    "CI CD Pipelines/Install Jenkins on AWS.md",
     "CI CD Pipelines/Jenkins.md",
+    "IaC/Infrastructure as Code Overview.md",
+    "IaC",
+    "CI CD Pipelines/Install Jenkins on AWS.md",
     "Cloud/Azure/Deploying Test Application in Azure.md",
     "Attachments/Pasted image 20240322145153.png",
     "Attachments/Pasted image 20240322144437.png",
@@ -245,7 +247,6 @@
     "Cloud/Azure",
     "Attachments/git-cheat-sheet.pdf",
     "Attachments/linux-commands-handbook.pdf",
-    "Attachments",
-    "Cloud"
+    "Attachments"
   ]
 }
