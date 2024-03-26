@@ -434,6 +434,19 @@ Output
 Linux tech257-oliver-linux 6.5.0-1016-azure #16~22.04.1-Ubuntu SMP Fri Feb 16 15:42:02 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
+```bash
+lsb_release -a
+```
+
+Output
+
+```bash
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 22.04.3 LTS
+Release:        22.04
+Codename:       jammy
+```
 ## Modify a line or part of a file with ``sed``
 
 [``sed`` Guide](https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux)

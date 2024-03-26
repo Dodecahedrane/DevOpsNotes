@@ -34,6 +34,19 @@
             }
           },
           {
+            "id": "b9772b4d2e1bdc44",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud/Linux/Basic Linux Commands.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "32c9e85ff9f6b4af",
             "type": "leaf",
             "state": {
@@ -179,6 +192,7 @@
   "lastOpenFiles": [
     "IaC/Ansible/Ansible Basics.md",
     "IaC/Ansible/Get the Test Application Running With Ansible.md",
+    "Cloud/Linux/Basic Linux Commands.md",
     "Cloud/Azure/Deploying Test Application in Azure.md",
     "IaC/Ansible/HostsFile.yaml",
     "IaC/Ansible/Hosts File.md",
@@ -195,7 +209,6 @@
     "Attachments/Pasted image 20240322143822.png",
     "Attachments/Pasted image 20240322103948.png",
     "Attachments/Pasted image 20240321153639.png",
-    "Cloud/Linux/Basic Linux Commands.md",
     "CI CD Pipelines/CI CD Overview.md",
     "Attachments/Pasted image 20240321133508.png",
     "Attachments/Pasted image 20240321121710.png",

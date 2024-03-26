@@ -197,3 +197,106 @@ https://gist.github.com/roib20/27fde10af195cee1c1f8ac5f68be7e9b
       name: mongod
       state: restarted
 ```
+
+## Adding GPG keys and adding things to the apt repo
+
+### Sources:
+[Jeff G Blog Post](https://www.jeffgeerling.com/blog/2022/aptkey-deprecated-debianubuntu-how-fix-ansible)
+[examples](https://gist.github.com/roib20/27fde10af195cee1c1f8ac5f68be7e9b)
+[Ansible Docs](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/deb822_repository_module.html)
+[deb822 Style Docs](https://repolib.readthedocs.io/en/latest/deb822-format.html#:~:text=Deb822%2Dstyle%20Format,-This%20format%20addresses&text=Each%20source%20is%20configured%20in,defined%20within%20a%20single%20source.)
+[Fix ModuleNotFoundError: No module named 'debian' error](https://askubuntu.com/questions/1382388/failed-to-update-update-notifier-modulenotfounderror-no-module-named-debian)
+### Prerequisites:
+
+- Ansible 2.15 or greater
+
+### Playbook
+
+```bash
+---
+- hosts: 127.0.0.1
+  collections:
+    - community.windows
+  connection: local
+  gather_facts: yes
+  become: true
+
+# add a repo in the deb822 format
+  tasks:
+  - name: Add MongoDB source
+    ansible.builtin.deb822_repository:
+      # package name
+      name: mongodb-org
+      types: [deb]
+      # this is the base of the repo, just a dists/ directory
+      uris: "https://repo.mongodb.org/apt/ubuntu"
+      # this specifies the bit after the dists/
+      # ansible gets the distribution version, say 'jammy', 
+      #     then specifices the package (mongodb-org), 
+      #     and the version (7.0) you want installed
+      suites: "{{ ansible_distribution_release }}/mongodb-org/7.0"
+      # architecture, this or amd64. Might be able to ommit this? 
+      # //TODO See if you can ommit this and it still works/dectects the arch correctly
+      architectures: amd64
+      # not totally sure what this does, sometimes main, source etc.
+      # can tell in the official install docs for exmaple in mongodb
+      # echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse"
+      # the multiverse bit is at the end...
+      components: multiverse
+      # the gpg key for the package
+      signed_by: https://www.mongodb.org/static/pgp/server-7.0.asc
+      state: present
+      enabled: true
+      
+  - name: Install MongoDB
+    apt:
+      name: mongodb-org
+      state: present
+```
+
+#### Playbook Without Comments:
+
+```bash
+---
+- hosts: 127.0.0.1
+  collections:
+    - community.windows
+  connection: local
+  gather_facts: yes
+  become: true
+
+  tasks:
+  - name: Add MongoDB source
+    ansible.builtin.deb822_repository:
+      name: mongodb-org
+      types: [deb]
+      uris: "https://repo.mongodb.org/apt/ubuntu"
+      suites: "{{ ansible_distribution_release }}/mongodb-org/7.0"
+      architectures: amd64
+      components: multiverse
+      signed_by: https://www.mongodb.org/static/pgp/server-7.0.asc
+      state: present
+      enabled: true
+
+  - name: Install MongoDB
+    apt:
+      name: mongodb-org
+      state: present
+```
+### Common Errors:
+
+No Module Named Debian
+```bash
+ModuleNotFoundError: No module named 'debian'
+```
+
+Solution
+```bash
+sudo apt-get update
+sudo apt-get install --reinstall python3-debian
+
+sudo apt-get --fix-broken install
+sudo apt-get dist-upgrade
+```
+
+[Source](https://askubuntu.com/questions/1382388/failed-to-update-update-notifier-modulenotfounderror-no-module-named-debian)

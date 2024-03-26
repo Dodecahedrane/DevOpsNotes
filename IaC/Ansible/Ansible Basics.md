@@ -13,6 +13,7 @@ https://www.jeffgeerling.com/blog/2022/aptkey-deprecated-debianubuntu-how-fix-an
 Add the Ansible repo to apt-get and install
 
 ```bash
+sudo su # may not be required?? Investigate further... got a weird 'click here to sign into ubuntu account' without.....
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install ansible
