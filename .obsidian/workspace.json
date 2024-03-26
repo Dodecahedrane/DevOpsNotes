@@ -46,7 +46,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -96,7 +97,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5bc1b361942c56ca",
@@ -112,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IaC/Ansible/Ansible Basics.md",
+                "file": "IaC/Ansible/Get the Test Application Running With Ansible.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IaC/Ansible/Ansible Basics.md",
+                "file": "IaC/Ansible/Get the Test Application Running With Ansible.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IaC/Ansible/Ansible Basics.md"
+                "file": "IaC/Ansible/Get the Test Application Running With Ansible.md"
               }
             }
           }
@@ -173,13 +175,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a987d6015a0bdf69",
+  "active": "b56398c1a9dc3bf6",
   "lastOpenFiles": [
+    "IaC/Ansible/Ansible Basics.md",
     "IaC/Ansible/HostsFile.yaml",
     "IaC/Ansible/Hosts File.md",
     "IaC/Ansible/HostsFile.md",
     "IaC/Ansible/New Text Document.txt",
-    "IaC/Ansible/Ansible Basics.md",
     "IaC/Ansible/Get the Test Application Running With Ansible.md",
     "Cloud/Azure/Deploying Test Application in Azure.md",
     "CI CD Pipelines/Install Jenkins on AWS.md",
@@ -219,7 +221,6 @@
     "Cloud/Azure/prov_nodejs.sh",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
     "Cloud/Linux",
-    "Cloud/Azure",
-    "Attachments/git-cheat-sheet.pdf"
+    "Cloud/Azure"
   ]
 }

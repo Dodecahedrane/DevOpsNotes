@@ -109,11 +109,19 @@ sudo ansible-playbook <playbook-name>.yaml
 
 ## Database
 
+- [ ] Get MongoDB GPG Key
+- [ ] Add source to apt repo
+- [ ] Install MongoDB
+- [ ] Reload systemd
+- [ ] Enable mongod
+- [ ] Mongo Config
+- [ ] Restart mongod
+
 ```yaml
 ---
 
 - hosts: db
-  gather_facts: yes
+  gather_facts: yes
   become: true
 
   tasks:
@@ -127,28 +135,11 @@ sudo ansible-playbook <playbook-name>.yaml
       repo: deb https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse
       update_cache: yes
 
-  - name: Install MongoDB packages
-    apt:
-      name: "{{ item }}"
-      state: present
-      update_cache: yes
-    loop:
-      - mongodb-org=7.0.6
-      - mongodb-org-database=7.0.6
-      - mongodb-org-server=7.0.6
-      - mongodb-mongosh=2.1.5
-      - mongodb-org-mongos=7.0.6
-      - mongodb-org-tools=7.0.6
-
-  - name: Hold MongoDB packages
-    command: "echo '{{ item }} hold' | sudo dpkg --set-selections"
-    loop:
-      - mongodb-org
-      - mongodb-org-database
-      - mongodb-org-server
-      - mongodb-mongosh
-      - mongodb-org-mongos
-      - mongodb-org-tools
+  - name: Install MongoDB 
+    apt: 
+      name: mongodb-org 
+      state: present 
+      update_cache: yes
       - 
   - name: Reload systemd daemon
     systemd:
