@@ -143,6 +143,9 @@ This playbook
 - [x] Mongo Config
 - [x] Restart mongodb
 
+Add apt repo and key
+https://gist.github.com/roib20/27fde10af195cee1c1f8ac5f68be7e9b
+
 ```yaml
 ---
 
