@@ -5,6 +5,11 @@ tags:
   - IaC
   - InfrastructureasCode
 ---
+Run Playbook with
+
+```bash
+sudo ansible-playbook <playbook-name>.yaml
+```
 ## Ansible Playbook
 
 This playbook
@@ -17,19 +22,23 @@ This playbook
 - [x] Update the Nginx config file
 - [x] Reloads Nginx
 
-Run Playbook with
-
-```bash
-sudo ansible-playbook <playbook-name>.yaml
-```
-
 ```yaml
+# starts with ---
 ---
 
+# where do you want to install or run this playbook
+# group name, all, single hostname
 - hosts: web
+
+
+# see logs
   gather_facts: yes
+
+
+# provide admin access to this playbook
   become: true
-  
+
+# clone git repo
   tasks:
   - name: Clone the github repo test-app
     git:
@@ -61,8 +70,8 @@ sudo ansible-playbook <playbook-name>.yaml
   - name: Install npm packages
     npm:
       path: /home/ubuntu/repo/app/app/
-      state: present
-
+      state: latest
+      
   - name: Install express
     npm:
       name: express
@@ -83,8 +92,8 @@ sudo ansible-playbook <playbook-name>.yaml
       name: pm2
       global: yes
 
-  - name: Run pm2 stop all
-    command: pm2 stop all
+  - name: Run pm2 delete all
+    command: pm2 delete all
     ignore_errors: true
     become: yes
 
@@ -105,61 +114,83 @@ sudo ansible-playbook <playbook-name>.yaml
       state: restarted
       enabled: yes
     become: yes
+
+  - name: Add env variable
+    lineinfile:
+      path: /home/ubuntu/.bashrc
+      line: export DB_HOST=mongodb://63.33.209.72:27017/posts
+      create: yes
+
+  - name: source bashrc
+    shell: source ~/.bashrc && echo $DB_HOST
+    args:
+      executable: /bin/bash
+    register: result
+
+  - name: seed db
+    shell: node /home/ubuntu/repo/app/app/seeds/seed.js
+
+  - name: Run pm2 restart
+    command: chdir=/home/ubuntu/repo/app/app pm2 restart app.js --update-env
+    become_user: ubuntu
 ```
 
 ## Database
 
-- [ ] Get MongoDB GPG Key
-- [ ] Add source to apt repo
-- [ ] Install MongoDB
-- [ ] Reload systemd
-- [ ] Enable mongod
-- [ ] Mongo Config
-- [ ] Restart mongod
+- [x] Install MongoDB
+- [x] Reload systemd
+- [x] Enable mongodb
+- [x] Mongo Config
+- [x] Restart mongodb
 
 ```yaml
 ---
 
 - hosts: db
   gather_facts: yes
-  become: true
+  become: true
 
-  tasks:
-  - name:  Add mongo apt key
-    apt_key:
-      url: https://www.mongodb.org/static/pgp/server-7.0.asc
-      state: present
-      
-  - name: Add mongo to apt repo
-    apt_repository:
-      repo: deb https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse
-      update_cache: yes
+  tasks:
+  - name: Add MongoDB apt repository key
+    ansible.builtin.get_url:
+      url: "https://www.mongodb.org/static/pgp/server-7.0.asc"
+      dest: "/usr/share/keyrings/mongodb-server-7.0.gpg"
+      mode: '0644'
+      force: yes
 
-  - name: Install MongoDB 
-    apt: 
-      name: mongodb-org 
-      state: present 
-      update_cache: yes
-      - 
-  - name: Reload systemd daemon
-    systemd:
-      daemon_reload: yes
-  - name: Enable mongod service
-    systemd:
-      name: mongod
-      enabled: yes
-      state: started
+  - name: Add MongoDB repository
+    apt_repository:
+      repo: "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse"
+      state: present
+      filename: mongodb-org-7.0.list
 
-  - name: nginx copy new config using lineinfile
-    ansible.builtin.lineinfile:
-      path: /etc/mongod.conf
-      regexp: '127.0.0.1'
-      line: '0.0.0.0'
-      backrefs: yes
+  - name: Install mongodb
+    apt:
+      name: mongodb-org
+      state: present
 
-  - name: Enable mongod service
-    systemd:
-      name: mongod
-      state: restarted
+  - name: Reload systemd daemon
+    systemd:
+      daemon_reload: yes
 
+  - name: Enable mongodb service
+    systemd:
+      name: mongod
+      enabled: yes
+      state: started
+
+  - name: Modify MongoDB configuration
+    ansible.builtin.lineinfile:
+      path: /etc/mongod.conf
+      regexp: "{{ item.regexp }}"
+      line: "{{ item.line }}"
+      backrefs: yes
+    loop:
+      - { regexp: '127.0.0.1', line: 'bind_ip: 0.0.0.0' }
+      - { regexp: '#port: 27017', line: 'port: 27017' }
+
+  - name: Restart mongod service
+    systemd:
+      name: mongod
+      state: restarted
 ```

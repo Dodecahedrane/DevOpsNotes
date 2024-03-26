@@ -5,6 +5,9 @@ tags:
   - IaC
   - InfrastructureasCode
 ---
+https://www.jeffgeerling.com/blog/2022/aptkey-deprecated-debianubuntu-how-fix-ansible
+
+
 ## Ansible Dependencies
 
 Add the Ansible repo to apt-get and install
