@@ -17,6 +17,12 @@ This playbook
 - [x] Update the Nginx config file
 - [x] Reloads Nginx
 
+Run Playbook with
+
+```bash
+sudo ansible-playbook <playbook-name>.yaml
+```
+
 ```yaml
 ---
 
@@ -101,3 +107,68 @@ This playbook
     become: yes
 ```
 
+## Database
+
+```yaml
+---
+
+- hosts: db
+  gather_facts: yes
+  become: true
+
+  tasks:
+  - name:  Add mongo apt key
+    apt_key:
+      url: https://www.mongodb.org/static/pgp/server-7.0.asc
+      state: present
+      
+  - name: Add mongo to apt repo
+    apt_repository:
+      repo: deb https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse
+      update_cache: yes
+
+  - name: Install MongoDB packages
+    apt:
+      name: "{{ item }}"
+      state: present
+      update_cache: yes
+    loop:
+      - mongodb-org=7.0.6
+      - mongodb-org-database=7.0.6
+      - mongodb-org-server=7.0.6
+      - mongodb-mongosh=2.1.5
+      - mongodb-org-mongos=7.0.6
+      - mongodb-org-tools=7.0.6
+
+  - name: Hold MongoDB packages
+    command: "echo '{{ item }} hold' | sudo dpkg --set-selections"
+    loop:
+      - mongodb-org
+      - mongodb-org-database
+      - mongodb-org-server
+      - mongodb-mongosh
+      - mongodb-org-mongos
+      - mongodb-org-tools
+      - 
+  - name: Reload systemd daemon
+    systemd:
+      daemon_reload: yes
+  - name: Enable mongod service
+    systemd:
+      name: mongod
+      enabled: yes
+      state: started
+
+  - name: nginx copy new config using lineinfile
+    ansible.builtin.lineinfile:
+      path: /etc/mongod.conf
+      regexp: '127.0.0.1'
+      line: '0.0.0.0'
+      backrefs: yes
+
+  - name: Enable mongod service
+    systemd:
+      name: mongod
+      state: restarted
+
+```
