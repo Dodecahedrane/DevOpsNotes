@@ -4,63 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "e43e82470a1bebcd",
+        "id": "4734d31b43e4afc1",
         "type": "tabs",
         "children": [
           {
-            "id": "3bac2d9c47f5ea0b",
+            "id": "16f1d2702fa2cbe4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IaC/Ansible/Ansible Basics.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6e1d3944d06b573a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IaC/Ansible/Get the Test Application Running With Ansible.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b9772b4d2e1bdc44",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Linux/Basic Linux Commands.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "32c9e85ff9f6b4af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud/Azure/Deploying Test Application in Azure.md",
+                "file": "IaC/Terraform/Terraform Basics.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5bc1b361942c56ca",
@@ -127,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IaC/Ansible/Get the Test Application Running With Ansible.md",
+                "file": "IaC/Terraform/Terraform Basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IaC/Ansible/Get the Test Application Running With Ansible.md",
+                "file": "IaC/Terraform/Terraform Basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IaC/Ansible/Get the Test Application Running With Ansible.md"
+                "file": "IaC/Terraform/Terraform Basics.md"
               }
             }
           }
@@ -188,12 +147,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6e1d3944d06b573a",
+  "active": "16f1d2702fa2cbe4",
   "lastOpenFiles": [
-    "IaC/Ansible/Ansible Basics.md",
-    "IaC/Ansible/Get the Test Application Running With Ansible.md",
     "Cloud/Linux/Basic Linux Commands.md",
+    "IaC/Terraform/Terraform Basics.md",
+    "IaC/Terraform",
     "Cloud/Azure/Deploying Test Application in Azure.md",
+    "IaC/Ansible/Get the Test Application Running With Ansible.md",
+    "IaC/Ansible/Ansible Basics.md",
     "IaC/Ansible/HostsFile.yaml",
     "IaC/Ansible/Hosts File.md",
     "IaC/Ansible/HostsFile.md",
@@ -233,7 +194,6 @@
     "Markdown.md",
     "Cloud/Azure/prov_nodejs.sh",
     "Attachments/Linux-Cheat-Sheet-Sponsored-By-Loggly.pdf",
-    "Cloud/Linux",
-    "Cloud/Azure"
+    "Cloud/Linux"
   ]
 }
