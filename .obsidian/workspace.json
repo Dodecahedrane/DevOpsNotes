@@ -149,11 +149,11 @@
   },
   "active": "16f1d2702fa2cbe4",
   "lastOpenFiles": [
-    "Cloud/Linux/Basic Linux Commands.md",
+    "IaC/Ansible/Get the Test Application Running With Ansible.md",
     "IaC/Terraform/Terraform Basics.md",
+    "Cloud/Linux/Basic Linux Commands.md",
     "IaC/Terraform",
     "Cloud/Azure/Deploying Test Application in Azure.md",
-    "IaC/Ansible/Get the Test Application Running With Ansible.md",
     "IaC/Ansible/Ansible Basics.md",
     "IaC/Ansible/HostsFile.yaml",
     "IaC/Ansible/Hosts File.md",
